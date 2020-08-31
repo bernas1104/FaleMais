@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\FaleMaisServices\FaleMaisServices.csproj" />
+    <ProjectReference Include="..\FaleMaisPersistence\FaleMaisPersistence.csproj" />
+    <ProjectReference Include="..\FaleMaisDomain\FaleMaisDomain.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+</Project>
