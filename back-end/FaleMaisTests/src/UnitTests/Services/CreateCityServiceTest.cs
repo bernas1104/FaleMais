@@ -1,7 +1,7 @@
-using System;
 using AutoMapper;
 using FaleMaisDomain.Entities;
 using FaleMaisPersistence.Repositories.Interfaces;
+using FaleMaisServices.Exceptions;
 using FaleMaisServices.Services;
 using FaleMaisServices.Services.Interfaces;
 using FaleMaisServices.ViewModels;
@@ -53,7 +53,7 @@ namespace FaleMaisTests.UnitTests.Services {
       citiesRepository.Setup(x => x.FindByAreaCode(data.AreaCode))
         .Returns(city);
 
-      Assert.Throws<Exception>(() => cityServices.CreateCity(data));
+      Assert.Throws<FaleMaisException>(() => cityServices.CreateCity(data));
     }
   }
 }

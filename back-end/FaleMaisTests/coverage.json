@@ -26,37 +26,42 @@
       "FaleMaisAPI.Startup": {
         "System.Void FaleMaisAPI.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
           "Lines": {
-            "19": 0,
-            "20": 0,
-            "21": 0,
             "22": 0,
             "23": 0,
             "24": 0,
+            "25": 0,
             "26": 0,
             "27": 0,
             "28": 0,
             "29": 0,
-            "31": 0,
+            "30": 0,
             "32": 0,
-            "33": 0
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0
           },
           "Branches": []
         },
         "System.Void FaleMaisAPI.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)": {
           "Lines": {
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "40": 0,
             "42": 0,
             "43": 0,
             "44": 0,
-            "45": 0
+            "45": 0,
+            "47": 0,
+            "48": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0
           },
           "Branches": [
             {
-              "Line": 36,
+              "Line": 43,
               "Offset": 9,
               "EndOffset": 11,
               "Path": 0,
@@ -64,7 +69,7 @@
               "Hits": 0
             },
             {
-              "Line": 36,
+              "Line": 43,
               "Offset": 9,
               "EndOffset": 20,
               "Path": 1,
@@ -73,13 +78,169 @@
             }
           ]
         },
-        "System.Void FaleMaisAPI.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+        "System.Void FaleMaisAPI.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)": {
           "Lines": {
-            "15": 0,
-            "16": 0,
-            "17": 0
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0
           },
           "Branches": []
+        },
+        "System.Void FaleMaisAPI.Startup::<ConfigureServices>b__3_0(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)": {
+          "Lines": {},
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 14,
+              "EndOffset": 40,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 53,
+              "EndOffset": 55,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 53,
+              "EndOffset": 79,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisAPI/src/Middlewares/ExceptionHandler.cs": {
+      "FaleMaisAPI.Middlewares.ExceptionHandler": {
+        "System.Void FaleMaisAPI.Middlewares.ExceptionHandler::HandleFaleMaisException(FaleMaisServices.Exceptions.FaleMaisException)": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0
+          },
+          "Branches": []
+        },
+        "System.Void FaleMaisAPI.Middlewares.ExceptionHandler::HandleUnknownException(System.Exception)": {
+          "Lines": {
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0
+          },
+          "Branches": [
+            {
+              "Line": 50,
+              "Offset": 24,
+              "EndOffset": 26,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 50,
+              "Offset": 24,
+              "EndOffset": 29,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void FaleMaisAPI.Middlewares.ExceptionHandler::.ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)": {
+          "Lines": {
+            "14": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      },
+      "FaleMaisAPI.Middlewares.ExceptionHandler/<InvokeAsync>d__5": {
+        "System.Void FaleMaisAPI.Middlewares.ExceptionHandler/<InvokeAsync>d__5::MoveNext()": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 479,
+              "EndOffset": 481,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 492,
+              "EndOffset": 494,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 492,
+              "EndOffset": 497,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 479,
+              "EndOffset": 510,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
         }
       }
     },
@@ -116,12 +277,46 @@
         }
       }
     },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisAPI/src/Controllers/PricesController.cs": {
+      "FaleMaisAPI.Controllers.PricesController": {
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<FaleMaisServices.ViewModels.PriceViewModel> FaleMaisAPI.Controllers.PricesController::Create(FaleMaisServices.Services.Interfaces.IPriceServices,FaleMaisServices.ViewModels.PriceViewModel)": {
+          "Lines": {
+            "13": 2,
+            "14": 2,
+            "16": 2,
+            "17": 1,
+            "19": 1,
+            "21": 1,
+            "22": 2
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 16,
+              "Offset": 16,
+              "EndOffset": 38,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
     "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisAPI/src/Configurations/AutoMapperConfiguration.cs": {
       "FaleMaisAPI.Configurations.AutoMapperConfiguration": {
         "System.Void FaleMaisAPI.Configurations.AutoMapperConfiguration::.ctor()": {
           "Lines": {
             "7": 0,
             "8": 0,
+            "9": 0,
             "10": 0
           },
           "Branches": []
@@ -180,17 +375,71 @@
         }
       }
     },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisServices/src/ViewModels/PriceViewModel.cs": {
+      "FaleMaisServices.ViewModels.PriceViewModel": {
+        "System.String FaleMaisServices.ViewModels.PriceViewModel::get_Id()": {
+          "Lines": {
+            "6": 7
+          },
+          "Branches": []
+        },
+        "System.Byte FaleMaisServices.ViewModels.PriceViewModel::get_FromAreaCode()": {
+          "Lines": {
+            "7": 23
+          },
+          "Branches": []
+        },
+        "System.Byte FaleMaisServices.ViewModels.PriceViewModel::get_ToAreaCode()": {
+          "Lines": {
+            "8": 20
+          },
+          "Branches": []
+        },
+        "System.Double FaleMaisServices.ViewModels.PriceViewModel::get_PricePerMinute()": {
+          "Lines": {
+            "9": 6
+          },
+          "Branches": []
+        },
+        "System.Void FaleMaisServices.ViewModels.PriceViewModel::Validate()": {
+          "Lines": {
+            "11": 2,
+            "12": 2,
+            "13": 2,
+            "14": 2,
+            "15": 2,
+            "16": 2,
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "21": 2,
+            "22": 2,
+            "23": 2,
+            "24": 2,
+            "25": 2,
+            "26": 2,
+            "27": 2,
+            "28": 2,
+            "29": 2,
+            "30": 2
+          },
+          "Branches": []
+        }
+      }
+    },
     "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisServices/src/Services/CityServices.cs": {
       "FaleMaisServices.Services.CityServices": {
         "FaleMaisServices.ViewModels.CityViewModel FaleMaisServices.Services.CityServices::CreateCity(FaleMaisServices.ViewModels.CityViewModel)": {
           "Lines": {
             "18": 2,
             "19": 2,
-            "21": 3,
-            "23": 1,
+            "21": 2,
+            "22": 1,
             "24": 1,
-            "26": 1,
-            "27": 1
+            "25": 1,
+            "27": 1,
+            "28": 1
           },
           "Branches": [
             {
@@ -204,7 +453,7 @@
             {
               "Line": 21,
               "Offset": 25,
-              "EndOffset": 33,
+              "EndOffset": 43,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 1
@@ -212,6 +461,51 @@
           ]
         },
         "System.Void FaleMaisServices.Services.CityServices::.ctor(FaleMaisPersistence.Repositories.Interfaces.ICitiesRepository,AutoMapper.IMapper)": {
+          "Lines": {
+            "13": 4,
+            "14": 2,
+            "15": 2,
+            "16": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisServices/src/Services/PriceServices.cs": {
+      "FaleMaisServices.Services.PriceServices": {
+        "FaleMaisServices.ViewModels.PriceViewModel FaleMaisServices.Services.PriceServices::CreatePrice(FaleMaisServices.ViewModels.PriceViewModel)": {
+          "Lines": {
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "21": 2,
+            "22": 2,
+            "23": 1,
+            "25": 1,
+            "26": 1,
+            "28": 1,
+            "29": 1
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 31,
+              "EndOffset": 33,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 22,
+              "Offset": 31,
+              "EndOffset": 49,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void FaleMaisServices.Services.PriceServices::.ctor(FaleMaisPersistence.Repositories.Interfaces.IPricesRepository,AutoMapper.IMapper)": {
           "Lines": {
             "13": 4,
             "14": 2,
@@ -264,6 +558,27 @@
           "Branches": []
         },
         "System.Void FaleMaisPersistence.Repositories.CitiesRepository::.ctor(FaleMaisPersistence.Context.FaleMaisDbContext)": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisPersistence/src/Repositories/PricesRepository.cs": {
+      "FaleMaisPersistence.Repositories.PricesRepository": {
+        "FaleMaisDomain.Entities.Price FaleMaisPersistence.Repositories.PricesRepository::FindByFromToAreaCode(System.Byte,System.Byte)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Void FaleMaisPersistence.Repositories.PricesRepository::.ctor(FaleMaisPersistence.Context.FaleMaisDbContext)": {
           "Lines": {
             "8": 0
           },
@@ -704,7 +1019,7 @@
       "FaleMaisDomain.Entities.Price": {
         "System.String FaleMaisDomain.Entities.Price::get_Id()": {
           "Lines": {
-            "5": 0
+            "5": 3
           },
           "Branches": []
         },
