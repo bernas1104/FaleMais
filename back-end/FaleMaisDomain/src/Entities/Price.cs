@@ -9,5 +9,8 @@ namespace FaleMaisDomain.Entities {
     public DateTime? CreatedAt { get; set; }
     public DateTime? UpdatedAt { get; set; }
     public DateTime? DeletedAt { get; set; }
+
+    public City FromCity { get; set; }
+    public City ToCity { get; set; }
   }
 }

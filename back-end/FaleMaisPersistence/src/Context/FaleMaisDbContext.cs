@@ -1,4 +1,5 @@
 using FaleMaisDomain.Entities;
+using FaleMaisPersistence.Mappings;
 using Microsoft.EntityFrameworkCore;
 
 namespace FaleMaisPersistence.Context {
@@ -10,7 +11,8 @@ namespace FaleMaisPersistence.Context {
       : base(options) {}
 
     protected override void OnModelCreating(ModelBuilder builder) {
-      // TODO
+      builder.ApplyConfiguration(new CityMapping());
+      builder.ApplyConfiguration(new PriceMapping());
     }
   }
 }

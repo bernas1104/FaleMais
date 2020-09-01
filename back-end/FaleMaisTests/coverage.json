@@ -1,0 +1,762 @@
+{
+  "FaleMaisAPI.dll": {
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisAPI/Program.cs": {
+      "FaleMaisAPI.Program": {
+        "System.Void FaleMaisAPI.Program::Main(System.String[])": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.Extensions.Hosting.IHostBuilder FaleMaisAPI.Program::CreateHostBuilder(System.String[])": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisAPI/Startup.cs": {
+      "FaleMaisAPI.Startup": {
+        "System.Void FaleMaisAPI.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": []
+        },
+        "System.Void FaleMaisAPI.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)": {
+          "Lines": {
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0
+          },
+          "Branches": [
+            {
+              "Line": 36,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 9,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void FaleMaisAPI.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisAPI/src/Controllers/CitiesController.cs": {
+      "FaleMaisAPI.Controllers.CitiesController": {
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<FaleMaisServices.ViewModels.CityViewModel> FaleMaisAPI.Controllers.CitiesController::Create(FaleMaisServices.Services.Interfaces.ICityServices,FaleMaisServices.ViewModels.CityViewModel)": {
+          "Lines": {
+            "13": 2,
+            "14": 2,
+            "16": 2,
+            "17": 1,
+            "19": 1,
+            "21": 1,
+            "22": 2
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 16,
+              "Offset": 16,
+              "EndOffset": 38,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisAPI/src/Configurations/AutoMapperConfiguration.cs": {
+      "FaleMaisAPI.Configurations.AutoMapperConfiguration": {
+        "System.Void FaleMaisAPI.Configurations.AutoMapperConfiguration::.ctor()": {
+          "Lines": {
+            "7": 0,
+            "8": 0,
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisAPI/src/Configurations/DependencyInjectionConfiguration.cs": {
+      "FaleMaisAPI.Configurations.DependencyInjectionConfiguration": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection FaleMaisAPI.Configurations.DependencyInjectionConfiguration::ResolveDependencies(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "12": 0,
+            "14": 0,
+            "16": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "FaleMaisServices.dll": {
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisServices/src/ViewModels/CityViewModel.cs": {
+      "FaleMaisServices.ViewModels.CityViewModel": {
+        "System.Byte FaleMaisServices.ViewModels.CityViewModel::get_AreaCode()": {
+          "Lines": {
+            "6": 18
+          },
+          "Branches": []
+        },
+        "System.String FaleMaisServices.ViewModels.CityViewModel::get_Name()": {
+          "Lines": {
+            "7": 12
+          },
+          "Branches": []
+        },
+        "System.Void FaleMaisServices.ViewModels.CityViewModel::Validate()": {
+          "Lines": {
+            "9": 2,
+            "10": 2,
+            "11": 2,
+            "12": 2,
+            "13": 2,
+            "14": 2,
+            "15": 2,
+            "16": 2,
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "21": 2,
+            "22": 2,
+            "23": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisServices/src/Services/CityServices.cs": {
+      "FaleMaisServices.Services.CityServices": {
+        "FaleMaisServices.ViewModels.CityViewModel FaleMaisServices.Services.CityServices::CreateCity(FaleMaisServices.ViewModels.CityViewModel)": {
+          "Lines": {
+            "18": 2,
+            "19": 2,
+            "21": 3,
+            "23": 1,
+            "24": 1,
+            "26": 1,
+            "27": 1
+          },
+          "Branches": [
+            {
+              "Line": 21,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 21,
+              "Offset": 25,
+              "EndOffset": 33,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void FaleMaisServices.Services.CityServices::.ctor(FaleMaisPersistence.Repositories.Interfaces.ICitiesRepository,AutoMapper.IMapper)": {
+          "Lines": {
+            "13": 4,
+            "14": 2,
+            "15": 2,
+            "16": 2
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "FaleMaisPersistence.dll": {
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisPersistence/src/Repositories/BaseRepository.cs": {
+      "FaleMaisPersistence.Repositories.BaseRepository`1": {
+        "TClass FaleMaisPersistence.Repositories.BaseRepository`1::Create(TClass)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Void FaleMaisPersistence.Repositories.BaseRepository`1::SaveChanges()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Void FaleMaisPersistence.Repositories.BaseRepository`1::.ctor(FaleMaisPersistence.Context.FaleMaisDbContext)": {
+          "Lines": {
+            "7": 0,
+            "8": 0,
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisPersistence/src/Repositories/CitiesRepository.cs": {
+      "FaleMaisPersistence.Repositories.CitiesRepository": {
+        "FaleMaisDomain.Entities.City FaleMaisPersistence.Repositories.CitiesRepository::FindByAreaCode(System.Byte)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void FaleMaisPersistence.Repositories.CitiesRepository::.ctor(FaleMaisPersistence.Context.FaleMaisDbContext)": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisPersistence/src/Mappings/CityMapping.cs": {
+      "FaleMaisPersistence.Mappings.CityMapping": {
+        "System.Void FaleMaisPersistence.Mappings.CityMapping::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<FaleMaisDomain.Entities.City>)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisPersistence/src/Mappings/PriceMapping.cs": {
+      "FaleMaisPersistence.Mappings.PriceMapping": {
+        "System.Void FaleMaisPersistence.Mappings.PriceMapping::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<FaleMaisDomain.Entities.Price>)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisPersistence/src/Context/FaleMaisDbContext.cs": {
+      "FaleMaisPersistence.Context.FaleMaisDbContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<FaleMaisDomain.Entities.City> FaleMaisPersistence.Context.FaleMaisDbContext::get_Cities()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<FaleMaisDomain.Entities.Price> FaleMaisPersistence.Context.FaleMaisDbContext::get_Prices()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Void FaleMaisPersistence.Context.FaleMaisDbContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Void FaleMaisPersistence.Context.FaleMaisDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<FaleMaisPersistence.Context.FaleMaisDbContext>)": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisPersistence/Migrations/20200831224515_CreateCityAndPriceTables.cs": {
+      "FaleMaisPersistence.Migrations.CreateCityAndPriceTables": {
+        "System.Void FaleMaisPersistence.Migrations.CreateCityAndPriceTables::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0
+          },
+          "Branches": []
+        },
+        "System.Void FaleMaisPersistence.Migrations.CreateCityAndPriceTables::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisPersistence/Migrations/20200831224515_CreateCityAndPriceTables.Designer.cs": {
+      "FaleMaisPersistence.Migrations.CreateCityAndPriceTables": {
+        "System.Void FaleMaisPersistence.Migrations.CreateCityAndPriceTables::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "115": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisPersistence/Migrations/FaleMaisDbContextModelSnapshot.cs": {
+      "FaleMaisPersistence.Migrations.FaleMaisDbContextModelSnapshot": {
+        "System.Void FaleMaisPersistence.Migrations.FaleMaisDbContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "15": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "113": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "FaleMaisDomain.dll": {
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisDomain/src/Entities/City.cs": {
+      "FaleMaisDomain.Entities.City": {
+        "System.Byte FaleMaisDomain.Entities.City::get_AreaCode()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String FaleMaisDomain.Entities.City::get_Name()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> FaleMaisDomain.Entities.City::get_CreatedAt()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> FaleMaisDomain.Entities.City::get_UpdatedAt()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> FaleMaisDomain.Entities.City::get_DeletedAt()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<FaleMaisDomain.Entities.Price> FaleMaisDomain.Entities.City::get_PricesFromTo()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<FaleMaisDomain.Entities.Price> FaleMaisDomain.Entities.City::get_PricesToFrom()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisDomain/src/Entities/Price.cs": {
+      "FaleMaisDomain.Entities.Price": {
+        "System.String FaleMaisDomain.Entities.Price::get_Id()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.Byte FaleMaisDomain.Entities.Price::get_FromAreaCode()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Byte FaleMaisDomain.Entities.Price::get_ToAreaCode()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Double FaleMaisDomain.Entities.Price::get_PricePerMinute()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> FaleMaisDomain.Entities.Price::get_CreatedAt()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> FaleMaisDomain.Entities.Price::get_UpdatedAt()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> FaleMaisDomain.Entities.Price::get_DeletedAt()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "FaleMaisDomain.Entities.City FaleMaisDomain.Entities.Price::get_FromCity()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "FaleMaisDomain.Entities.City FaleMaisDomain.Entities.Price::get_ToCity()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
