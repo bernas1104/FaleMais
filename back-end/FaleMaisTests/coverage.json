@@ -246,19 +246,28 @@
     },
     "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisAPI/src/Controllers/CitiesController.cs": {
       "FaleMaisAPI.Controllers.CitiesController": {
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<System.Collections.Generic.IEnumerable`1<FaleMaisServices.ViewModels.CityViewModel>> FaleMaisAPI.Controllers.CitiesController::Index(FaleMaisServices.Services.Interfaces.ICityServices)": {
+          "Lines": {
+            "14": 1,
+            "15": 1,
+            "17": 1,
+            "18": 1
+          },
+          "Branches": []
+        },
         "Microsoft.AspNetCore.Mvc.ActionResult`1<FaleMaisServices.ViewModels.CityViewModel> FaleMaisAPI.Controllers.CitiesController::Create(FaleMaisServices.Services.Interfaces.ICityServices,FaleMaisServices.ViewModels.CityViewModel)": {
           "Lines": {
-            "13": 2,
-            "14": 2,
-            "16": 2,
-            "17": 1,
-            "19": 1,
-            "21": 1,
-            "22": 2
+            "24": 2,
+            "25": 2,
+            "27": 2,
+            "28": 1,
+            "30": 1,
+            "32": 1,
+            "33": 2
           },
           "Branches": [
             {
-              "Line": 16,
+              "Line": 27,
               "Offset": 16,
               "EndOffset": 18,
               "Path": 0,
@@ -266,7 +275,7 @@
               "Hits": 1
             },
             {
-              "Line": 16,
+              "Line": 27,
               "Offset": 16,
               "EndOffset": 38,
               "Path": 1,
@@ -327,8 +336,10 @@
       "FaleMaisAPI.Configurations.DependencyInjectionConfiguration": {
         "Microsoft.Extensions.DependencyInjection.IServiceCollection FaleMaisAPI.Configurations.DependencyInjectionConfiguration::ResolveDependencies(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
           "Lines": {
+            "11": 0,
             "12": 0,
-            "14": 0,
+            "13": 0,
+            "15": 0,
             "16": 0,
             "18": 0,
             "19": 0
@@ -343,13 +354,13 @@
       "FaleMaisServices.ViewModels.CityViewModel": {
         "System.Byte FaleMaisServices.ViewModels.CityViewModel::get_AreaCode()": {
           "Lines": {
-            "6": 18
+            "6": 30
           },
           "Branches": []
         },
         "System.String FaleMaisServices.ViewModels.CityViewModel::get_Name()": {
           "Lines": {
-            "7": 12
+            "7": 24
           },
           "Branches": []
         },
@@ -430,20 +441,29 @@
     },
     "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisServices/src/Services/CityServices.cs": {
       "FaleMaisServices.Services.CityServices": {
+        "System.Collections.Generic.IEnumerable`1<FaleMaisServices.ViewModels.CityViewModel> FaleMaisServices.Services.CityServices::ListAllCities()": {
+          "Lines": {
+            "19": 1,
+            "20": 1,
+            "22": 1,
+            "23": 1
+          },
+          "Branches": []
+        },
         "FaleMaisServices.ViewModels.CityViewModel FaleMaisServices.Services.CityServices::CreateCity(FaleMaisServices.ViewModels.CityViewModel)": {
           "Lines": {
-            "18": 2,
-            "19": 2,
-            "21": 2,
-            "22": 1,
-            "24": 1,
-            "25": 1,
-            "27": 1,
-            "28": 1
+            "25": 2,
+            "26": 2,
+            "28": 2,
+            "29": 1,
+            "31": 1,
+            "32": 1,
+            "34": 1,
+            "35": 1
           },
           "Branches": [
             {
-              "Line": 21,
+              "Line": 28,
               "Offset": 25,
               "EndOffset": 27,
               "Path": 0,
@@ -451,7 +471,7 @@
               "Hits": 1
             },
             {
-              "Line": 21,
+              "Line": 28,
               "Offset": 25,
               "EndOffset": 43,
               "Path": 1,
@@ -462,10 +482,10 @@
         },
         "System.Void FaleMaisServices.Services.CityServices::.ctor(FaleMaisPersistence.Repositories.Interfaces.ICitiesRepository,AutoMapper.IMapper)": {
           "Lines": {
-            "13": 4,
-            "14": 2,
-            "15": 2,
-            "16": 2
+            "14": 6,
+            "15": 3,
+            "16": 3,
+            "17": 3
           },
           "Branches": []
         }
@@ -550,16 +570,25 @@
       "FaleMaisPersistence.Repositories.CitiesRepository": {
         "FaleMaisDomain.Entities.City FaleMaisPersistence.Repositories.CitiesRepository::FindByAreaCode(System.Byte)": {
           "Lines": {
-            "10": 0,
             "11": 0,
-            "13": 0,
-            "14": 0
+            "12": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<FaleMaisDomain.Entities.City> FaleMaisPersistence.Repositories.CitiesRepository::FindAll()": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "20": 0,
+            "21": 0
           },
           "Branches": []
         },
         "System.Void FaleMaisPersistence.Repositories.CitiesRepository::.ctor(FaleMaisPersistence.Context.FaleMaisDbContext)": {
           "Lines": {
-            "8": 0
+            "9": 0
           },
           "Branches": []
         }
@@ -973,13 +1002,13 @@
       "FaleMaisDomain.Entities.City": {
         "System.Byte FaleMaisDomain.Entities.City::get_AreaCode()": {
           "Lines": {
-            "6": 0
+            "6": 27
           },
           "Branches": []
         },
         "System.String FaleMaisDomain.Entities.City::get_Name()": {
           "Lines": {
-            "7": 0
+            "7": 27
           },
           "Branches": []
         },

@@ -8,8 +8,6 @@ using Newtonsoft.Json;
 
 namespace FaleMaisAPI.Middlewares {
   public class ExceptionHandler : IMiddleware {
-    private string Json;
-    private int StatusCode;
     private readonly IWebHostEnvironment Environment;
     private readonly string ContentType = "application/json";
 
@@ -21,21 +19,17 @@ namespace FaleMaisAPI.Middlewares {
       try {
         await next(context);
       } catch (FaleMaisException fme) {
-        HandleFaleMaisException(fme);
-        StatusCode = fme.StatusCode;
+        await HandleFaleMaisException(context, fme);
       } catch (Exception ex) {
-        HandleUnknownException(ex);
-        StatusCode = StatusCodes.Status500InternalServerError;
-      } finally {
-        context.Response.StatusCode = StatusCode;
-        context.Response.ContentType = ContentType;
-
-        await context.Response.WriteAsync(Json);
+        await HandleUnknownException(context, ex);
       }
     }
 
-    private void HandleFaleMaisException(FaleMaisException exception) {
-      Json = JsonConvert.SerializeObject(
+    private Task HandleFaleMaisException(
+      HttpContext context,
+      FaleMaisException exception
+    ) {
+      var json = JsonConvert.SerializeObject(
         new {
           StatusCode = exception.StatusCode,
           Message = exception.Message,
@@ -44,10 +38,18 @@ namespace FaleMaisAPI.Middlewares {
           NullValueHandling = NullValueHandling.Ignore,
         }
       );
+
+      context.Response.StatusCode = exception.StatusCode;
+      context.Response.ContentType = ContentType;
+
+      return context.Response.WriteAsync(json);
     }
 
-    private void HandleUnknownException(Exception exception) {
-      Json = JsonConvert.SerializeObject(
+    private Task HandleUnknownException(
+      HttpContext context,
+      Exception exception
+    ) {
+      var json = JsonConvert.SerializeObject(
         new {
           StatusCode = StatusCodes.Status500InternalServerError,
           Message = exception.Message,
@@ -57,6 +59,11 @@ namespace FaleMaisAPI.Middlewares {
           NullValueHandling = NullValueHandling.Ignore,
         }
       );
+
+      context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+      context.Response.ContentType = ContentType;
+
+      return context.Response.WriteAsync(json);
     }
   }
 }

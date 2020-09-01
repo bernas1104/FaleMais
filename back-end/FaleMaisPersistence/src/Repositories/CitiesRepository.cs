@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using FaleMaisDomain.Entities;
 using FaleMaisPersistence.Context;
@@ -11,6 +12,12 @@ namespace FaleMaisPersistence.Repositories {
       var city = dbContext.Cities.FirstOrDefault(c => c.AreaCode == areaCode);
 
       return city;
+    }
+
+    public IEnumerable<City> FindAll() {
+      var cities = dbContext.Cities.AsEnumerable();
+
+      return cities;
     }
   }
 }

@@ -1,6 +1,9 @@
+using System;
+using System.Collections.Generic;
 using FaleMaisAPI.Controllers;
 using FaleMaisServices.Services.Interfaces;
 using FaleMaisServices.ViewModels;
+using FaleMaisTests.Bogus.Entities;
 using FaleMaisTests.Bogus.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -30,6 +33,25 @@ namespace FaleMaisTests.UnitTests.Controllers {
 
       Assert.NotNull(actionResult);
       Assert.Equal(StatusCodes.Status201Created, actionResult.StatusCode);
+    }
+
+    [Fact]
+    public void Should_Return_201_Status_Code_When_Listing_All_Cities() {
+      var rnd = new Random();
+
+      var cities = CityFaker.GenerateCities(rnd.Next(1, 11));
+
+      var citiesViewModel = CityViewModelFaker.GenerateCitiesViewModel(cities);
+
+      cityServices.Setup(x => x.ListAllCities()).Returns(citiesViewModel);
+
+      var response = citiesController.Index(cityServices.Object);
+
+      var actionResult = Assert.IsType<OkObjectResult>(response.Result);
+      var actionValue = Assert.IsType<List<CityViewModel>>(actionResult.Value);
+
+      Assert.NotNull(actionResult);
+      Assert.Equal(StatusCodes.Status200OK, actionResult.StatusCode);
     }
 
     [Fact]

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using AutoMapper;
 using FaleMaisDomain.Entities;
 using FaleMaisPersistence.Repositories.Interfaces;
@@ -13,6 +14,12 @@ namespace FaleMaisServices.Services {
     public CityServices(ICitiesRepository citiesRepository, IMapper mapper) {
       this.citiesRepository = citiesRepository;
       this.mapper = mapper;
+    }
+
+    public IEnumerable<CityViewModel> ListAllCities() {
+      var cities = citiesRepository.FindAll();
+
+      return mapper.Map<IEnumerable<CityViewModel>>(cities);
     }
 
     public CityViewModel CreateCity(CityViewModel data) {
