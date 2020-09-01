@@ -1,4 +1,3 @@
-using FaleMaisDomain.Entities;
 using FaleMaisPersistence.Repositories;
 using FaleMaisPersistence.Repositories.Interfaces;
 using FaleMaisServices.Services;
@@ -10,10 +9,11 @@ namespace FaleMaisAPI.Configurations {
     public static IServiceCollection ResolveDependencies(
       this IServiceCollection services
     ) {
-      // services.AddScoped<BaseRepository<City>>();
       services.AddScoped<ICitiesRepository, CitiesRepository>();
+      services.AddScoped<IPricesRepository, PricesRepository>();
 
       services.AddTransient<ICityServices, CityServices>();
+      services.AddTransient<IPriceServices, PriceServices>();
 
       return services;
     }
