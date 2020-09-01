@@ -16,7 +16,7 @@ namespace FaleMaisPersistence.Mappings {
         .HasColumnName("to_area_code")
         .IsRequired();
       builder.Property(x => x.PricePerMinute)
-        .HasColumnName("price_per_minut")
+        .HasColumnName("price_per_minute")
         .HasColumnType("real")
         .IsRequired();
       builder.Property(x => x.CreatedAt)
@@ -33,12 +33,12 @@ namespace FaleMaisPersistence.Mappings {
 
       builder.HasOne(p => p.FromCity)
         .WithMany(c => c.PricesToFrom)
-        .HasForeignKey(p => p.FromAreaCode)
+        // .HasForeignKey(p => p.FromAreaCode)
         .OnDelete(DeleteBehavior.Cascade);
 
       builder.HasOne(p => p.ToCity)
         .WithMany(c => c.PricesFromTo)
-        .HasForeignKey(p => p.ToAreaCode)
+        // .HasForeignKey(p => p.ToAreaCode)
         .OnDelete(DeleteBehavior.Cascade);
     }
   }

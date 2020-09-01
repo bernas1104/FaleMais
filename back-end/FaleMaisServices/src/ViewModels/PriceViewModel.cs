@@ -1,3 +1,4 @@
+using FaleMaisDomain.Entities;
 using Flunt.Notifications;
 using Flunt.Validations;
 
@@ -7,6 +8,7 @@ namespace FaleMaisServices.ViewModels {
     public byte FromAreaCode { get; set; }
     public byte ToAreaCode { get; set; }
     public double PricePerMinute { get; set; }
+    public City ToCity { get; set; }
 
     public void Validate() {
       AddNotifications(
