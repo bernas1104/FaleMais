@@ -1,5 +1,6 @@
 using AutoMapper;
 using FaleMaisAPI.Configurations;
+using FaleMaisAPI.Middlewares;
 using FaleMaisPersistence.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -11,16 +12,21 @@ using Microsoft.Extensions.Hosting;
 namespace FaleMaisAPI {
   public class Startup {
     public IConfiguration Configuration;
+    public IWebHostEnvironment Environment;
 
-    public Startup(IConfiguration configuration) {
+    public Startup(IConfiguration configuration, IWebHostEnvironment environment) {
       Configuration = configuration;
+      Environment = environment;
     }
 
     public void ConfigureServices(IServiceCollection services) {
       services.AddDbContext<FaleMaisDbContext>(
-        opt => opt.UseNpgsql(
-          Configuration.GetConnectionString("DefaultConnection")
-        )
+        opt => {
+          if (Environment.IsDevelopment())
+            opt.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
+          if (Environment.IsProduction())
+            opt.UseNpgsql(Configuration["DatabaseConnection"]);
+        }
       );
 
       services.AddControllers().AddNewtonsoftJson(
@@ -28,8 +34,9 @@ namespace FaleMaisAPI {
           = Newtonsoft.Json.ReferenceLoopHandling.Ignore
       );
 
-      services.AddAutoMapper(typeof(Startup));
+      services.AddTransient<ExceptionHandler>();
       services.ResolveDependencies();
+      services.AddAutoMapper(typeof(Startup));
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
@@ -38,6 +45,7 @@ namespace FaleMaisAPI {
       }
 
       app.UseRouting();
+      app.UseMiddleware<ExceptionHandler>();
 
       app.UseEndpoints(endpoints => {
         endpoints.MapControllers();
