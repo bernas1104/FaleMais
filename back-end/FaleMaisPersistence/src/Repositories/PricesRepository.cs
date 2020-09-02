@@ -1,7 +1,9 @@
+using System.Collections.Generic;
 using System.Linq;
 using FaleMaisDomain.Entities;
 using FaleMaisPersistence.Context;
 using FaleMaisPersistence.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace FaleMaisPersistence.Repositories {
   public class PricesRepository : BaseRepository<Price>, IPricesRepository {
@@ -13,6 +15,15 @@ namespace FaleMaisPersistence.Repositories {
       );
 
       return price;
+    }
+
+    public IEnumerable<Price> FindByFromToAreaCodeWithCities(byte fromAreaCode) {
+      var prices = dbContext.Prices.AsNoTracking()
+        .Include(x => x.ToCity)
+        .Where(x => x.FromAreaCode == fromAreaCode)
+        .AsEnumerable();
+
+      return prices;
     }
   }
 }

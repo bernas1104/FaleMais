@@ -16,7 +16,7 @@ namespace FaleMaisPersistence.Mappings {
         .HasColumnName("to_area_code")
         .IsRequired();
       builder.Property(x => x.PricePerMinute)
-        .HasColumnName("price_per_minut")
+        .HasColumnName("price_per_minute")
         .HasColumnType("real")
         .IsRequired();
       builder.Property(x => x.CreatedAt)

@@ -3,15 +3,17 @@ using System;
 using FaleMaisPersistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace FaleMaisPersistence.Migrations
 {
     [DbContext(typeof(FaleMaisDbContext))]
-    partial class FaleMaisDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200901213808_AlterTablesRelations2")]
+    partial class AlterTablesRelations2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

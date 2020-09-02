@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using FaleMaisDomain.Entities;
 using FaleMaisPersistence.Repositories.Interfaces;
@@ -26,6 +28,26 @@ namespace FaleMaisServices.Services {
       price = pricesRepository.Create(price);
 
       return mapper.Map<PriceViewModel>(price);
+    }
+
+    public IEnumerable<PriceViewModel> ListPricesFromTo(
+      byte fromAreaCode,
+      byte toAreaCode = 0
+    ) {
+      IList<PriceViewModel> pricesViewModel;
+      IList<Price> prices = new List<Price>();
+
+      if (toAreaCode != 0) {
+        var price = pricesRepository.FindByFromToAreaCode(fromAreaCode, toAreaCode);
+        prices.Add(price);
+      }
+
+      if (toAreaCode == 0)
+        prices = pricesRepository.FindByFromToAreaCodeWithCities(fromAreaCode).ToList();
+
+      pricesViewModel = mapper.Map<IList<PriceViewModel>>(prices);
+
+      return pricesViewModel;
     }
   }
 }
