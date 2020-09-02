@@ -15,14 +15,20 @@ using Xunit;
 namespace FaleMaisTests.UnitTests.Services {
   public class ListPricesFromToTest {
     private readonly Mock<IPricesRepository> pricesRepository;
+    private readonly Mock<ICitiesRepository> citiesRepository;
     private readonly Mock<IMapper> mapper;
     private readonly IPriceServices priceServices;
 
     public ListPricesFromToTest() {
       pricesRepository = new Mock<IPricesRepository>();
+      citiesRepository = new Mock<ICitiesRepository>();
       mapper = new Mock<IMapper>();
 
-      priceServices = new PriceServices(pricesRepository.Object, mapper.Object);
+      priceServices = new PriceServices(
+        pricesRepository.Object,
+        citiesRepository.Object,
+        mapper.Object
+      );
     }
 
     [Fact]

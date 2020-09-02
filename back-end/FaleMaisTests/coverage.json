@@ -12,11 +12,11 @@
         },
         "Microsoft.Extensions.Hosting.IHostBuilder FaleMaisAPI.Program::CreateHostBuilder(System.String[])": {
           "Lines": {
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0
+            "20": 4,
+            "21": 4,
+            "22": 8,
+            "23": 8,
+            "24": 8
           },
           "Branches": []
         }
@@ -26,38 +26,38 @@
       "FaleMaisAPI.Startup": {
         "System.Void FaleMaisAPI.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
           "Lines": {
-            "22": 0,
-            "23": 0,
+            "22": 4,
+            "23": 4,
             "24": 0,
             "25": 0,
             "26": 0,
             "27": 0,
             "28": 0,
             "29": 0,
-            "30": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0
+            "30": 4,
+            "32": 4,
+            "33": 8,
+            "34": 8,
+            "35": 4,
+            "37": 4,
+            "38": 4,
+            "39": 4,
+            "40": 4
           },
           "Branches": []
         },
         "System.Void FaleMaisAPI.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)": {
           "Lines": {
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "47": 0,
-            "48": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "53": 0
+            "42": 4,
+            "43": 8,
+            "44": 4,
+            "45": 4,
+            "47": 4,
+            "48": 4,
+            "50": 8,
+            "51": 8,
+            "52": 8,
+            "53": 4
           },
           "Branches": [
             {
@@ -66,7 +66,7 @@
               "EndOffset": 11,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 4
             },
             {
               "Line": 43,
@@ -74,16 +74,16 @@
               "EndOffset": 20,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 4
             }
           ]
         },
         "System.Void FaleMaisAPI.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)": {
           "Lines": {
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0
+            "17": 8,
+            "18": 4,
+            "19": 4,
+            "20": 4
           },
           "Branches": []
         },
@@ -130,20 +130,20 @@
       "FaleMaisAPI.Middlewares.ExceptionHandler": {
         "System.Threading.Tasks.Task FaleMaisAPI.Middlewares.ExceptionHandler::HandleFaleMaisException(Microsoft.AspNetCore.Http.HttpContext,FaleMaisServices.Exceptions.FaleMaisException)": {
           "Lines": {
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "42": 0,
-            "43": 0,
-            "45": 0,
-            "46": 0
+            "31": 4,
+            "32": 4,
+            "33": 4,
+            "34": 4,
+            "35": 4,
+            "36": 4,
+            "37": 4,
+            "38": 4,
+            "39": 4,
+            "40": 4,
+            "42": 4,
+            "43": 4,
+            "45": 4,
+            "46": 4
           },
           "Branches": []
         },
@@ -186,10 +186,10 @@
         },
         "System.Void FaleMaisAPI.Middlewares.ExceptionHandler::.ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)": {
           "Lines": {
-            "12": 0,
-            "14": 0,
-            "15": 0,
-            "16": 0
+            "12": 17,
+            "14": 34,
+            "15": 17,
+            "16": 17
           },
           "Branches": []
         }
@@ -197,15 +197,15 @@
       "FaleMaisAPI.Middlewares.ExceptionHandler/<InvokeAsync>d__3": {
         "System.Void FaleMaisAPI.Middlewares.ExceptionHandler/<InvokeAsync>d__3::MoveNext()": {
           "Lines": {
-            "18": 0,
-            "19": 0,
-            "20": 0,
-            "21": 0,
-            "22": 0,
+            "18": 17,
+            "19": 17,
+            "20": 17,
+            "21": 21,
+            "22": 4,
             "23": 0,
             "24": 0,
             "25": 0,
-            "26": 0
+            "26": 17
           },
           "Branches": []
         }
@@ -215,22 +215,22 @@
       "FaleMaisAPI.Controllers.CitiesController": {
         "Microsoft.AspNetCore.Mvc.ActionResult`1<System.Collections.Generic.IEnumerable`1<FaleMaisServices.ViewModels.CityViewModel>> FaleMaisAPI.Controllers.CitiesController::Index(FaleMaisServices.Services.Interfaces.ICityServices)": {
           "Lines": {
-            "14": 1,
-            "15": 1,
-            "17": 1,
-            "18": 1
+            "14": 2,
+            "15": 2,
+            "17": 2,
+            "18": 2
           },
           "Branches": []
         },
         "Microsoft.AspNetCore.Mvc.ActionResult`1<FaleMaisServices.ViewModels.CityViewModel> FaleMaisAPI.Controllers.CitiesController::Create(FaleMaisServices.Services.Interfaces.ICityServices,FaleMaisServices.ViewModels.CityViewModel)": {
           "Lines": {
-            "24": 2,
-            "25": 2,
-            "27": 2,
-            "28": 1,
-            "30": 1,
-            "32": 1,
-            "33": 2
+            "24": 11,
+            "25": 11,
+            "27": 11,
+            "28": 2,
+            "30": 9,
+            "32": 8,
+            "33": 10
           },
           "Branches": [
             {
@@ -239,7 +239,7 @@
               "EndOffset": 18,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 1
+              "Hits": 2
             },
             {
               "Line": 27,
@@ -247,7 +247,7 @@
               "EndOffset": 38,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 1
+              "Hits": 9
             }
           ]
         }
@@ -257,13 +257,13 @@
       "FaleMaisAPI.Controllers.PricesController": {
         "Microsoft.AspNetCore.Mvc.ActionResult`1<FaleMaisServices.ViewModels.PriceViewModel> FaleMaisAPI.Controllers.PricesController::Create(FaleMaisServices.Services.Interfaces.IPriceServices,FaleMaisServices.ViewModels.PriceViewModel)": {
           "Lines": {
-            "16": 2,
-            "17": 2,
-            "19": 2,
+            "16": 7,
+            "17": 7,
+            "19": 7,
             "20": 1,
-            "22": 1,
-            "24": 1,
-            "25": 2
+            "22": 6,
+            "24": 3,
+            "25": 4
           },
           "Branches": [
             {
@@ -280,21 +280,21 @@
               "EndOffset": 38,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 1
+              "Hits": 6
             }
           ]
         },
         "Microsoft.AspNetCore.Mvc.ActionResult`1<System.Collections.Generic.IEnumerable`1<FaleMaisServices.ViewModels.PriceViewModel>> FaleMaisAPI.Controllers.PricesController::GetPrices(FaleMaisServices.Services.Interfaces.IPriceServices,System.Byte,System.Byte)": {
           "Lines": {
-            "33": 0,
+            "33": 2,
             "34": 0,
             "35": 0,
             "36": 0,
             "37": 0,
             "38": 0,
-            "41": 0,
-            "43": 0,
-            "44": 0
+            "41": 2,
+            "43": 2,
+            "44": 2
           },
           "Branches": [
             {
@@ -303,7 +303,7 @@
               "EndOffset": 5,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 2
             },
             {
               "Line": 34,
@@ -327,7 +327,7 @@
               "EndOffset": 47,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 2
             }
           ]
         }
@@ -337,10 +337,10 @@
       "FaleMaisAPI.Configurations.AutoMapperConfiguration": {
         "System.Void FaleMaisAPI.Configurations.AutoMapperConfiguration::.ctor()": {
           "Lines": {
-            "7": 0,
-            "8": 0,
-            "9": 0,
-            "10": 0
+            "7": 8,
+            "8": 4,
+            "9": 4,
+            "10": 4
           },
           "Branches": []
         }
@@ -350,13 +350,13 @@
       "FaleMaisAPI.Configurations.DependencyInjectionConfiguration": {
         "Microsoft.Extensions.DependencyInjection.IServiceCollection FaleMaisAPI.Configurations.DependencyInjectionConfiguration::ResolveDependencies(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
           "Lines": {
-            "11": 0,
-            "12": 0,
-            "13": 0,
-            "15": 0,
-            "16": 0,
-            "18": 0,
-            "19": 0
+            "11": 4,
+            "12": 4,
+            "13": 4,
+            "15": 4,
+            "16": 4,
+            "18": 4,
+            "19": 4
           },
           "Branches": []
         }
@@ -368,33 +368,33 @@
       "FaleMaisServices.ViewModels.CityViewModel": {
         "System.Byte FaleMaisServices.ViewModels.CityViewModel::get_AreaCode()": {
           "Lines": {
-            "6": 29
+            "6": 114
           },
           "Branches": []
         },
         "System.String FaleMaisServices.ViewModels.CityViewModel::get_Name()": {
           "Lines": {
-            "7": 23
+            "7": 100
           },
           "Branches": []
         },
         "System.Void FaleMaisServices.ViewModels.CityViewModel::Validate()": {
           "Lines": {
-            "9": 2,
-            "10": 2,
-            "11": 2,
-            "12": 2,
-            "13": 2,
-            "14": 2,
-            "15": 2,
-            "16": 2,
-            "17": 2,
-            "18": 2,
-            "19": 2,
-            "20": 2,
-            "21": 2,
-            "22": 2,
-            "23": 2
+            "9": 11,
+            "10": 11,
+            "11": 11,
+            "12": 11,
+            "13": 11,
+            "14": 11,
+            "15": 11,
+            "16": 11,
+            "17": 11,
+            "18": 11,
+            "19": 11,
+            "20": 11,
+            "21": 11,
+            "22": 11,
+            "23": 11
           },
           "Branches": []
         }
@@ -404,56 +404,56 @@
       "FaleMaisServices.ViewModels.PriceViewModel": {
         "System.String FaleMaisServices.ViewModels.PriceViewModel::get_Id()": {
           "Lines": {
-            "7": 18
+            "7": 32
           },
           "Branches": []
         },
         "System.Byte FaleMaisServices.ViewModels.PriceViewModel::get_FromAreaCode()": {
           "Lines": {
-            "8": 34
+            "8": 94
           },
           "Branches": []
         },
         "System.Byte FaleMaisServices.ViewModels.PriceViewModel::get_ToAreaCode()": {
           "Lines": {
-            "9": 31
+            "9": 80
           },
           "Branches": []
         },
         "System.Double FaleMaisServices.ViewModels.PriceViewModel::get_PricePerMinute()": {
           "Lines": {
-            "10": 17
+            "10": 31
           },
           "Branches": []
         },
         "FaleMaisDomain.Entities.City FaleMaisServices.ViewModels.PriceViewModel::get_ToCity()": {
           "Lines": {
-            "11": 0
+            "11": 16
           },
           "Branches": []
         },
         "System.Void FaleMaisServices.ViewModels.PriceViewModel::Validate()": {
           "Lines": {
-            "13": 2,
-            "14": 2,
-            "15": 2,
-            "16": 2,
-            "17": 2,
-            "18": 2,
-            "19": 2,
-            "20": 2,
-            "21": 2,
-            "22": 2,
-            "23": 2,
-            "24": 2,
-            "25": 2,
-            "26": 2,
-            "27": 2,
-            "28": 2,
-            "29": 2,
-            "30": 2,
-            "31": 2,
-            "32": 2
+            "13": 7,
+            "14": 7,
+            "15": 7,
+            "16": 7,
+            "17": 7,
+            "18": 7,
+            "19": 7,
+            "20": 7,
+            "21": 7,
+            "22": 7,
+            "23": 7,
+            "24": 7,
+            "25": 7,
+            "26": 7,
+            "27": 7,
+            "28": 7,
+            "29": 7,
+            "30": 7,
+            "31": 7,
+            "32": 7
           },
           "Branches": []
         }
@@ -463,23 +463,23 @@
       "FaleMaisServices.Services.CityServices": {
         "System.Collections.Generic.IEnumerable`1<FaleMaisServices.ViewModels.CityViewModel> FaleMaisServices.Services.CityServices::ListAllCities()": {
           "Lines": {
-            "19": 1,
-            "20": 1,
-            "22": 1,
-            "23": 1
+            "19": 2,
+            "20": 2,
+            "22": 2,
+            "23": 2
           },
           "Branches": []
         },
         "FaleMaisServices.ViewModels.CityViewModel FaleMaisServices.Services.CityServices::CreateCity(FaleMaisServices.ViewModels.CityViewModel)": {
           "Lines": {
-            "25": 2,
-            "26": 2,
-            "28": 2,
-            "29": 1,
-            "31": 1,
-            "32": 1,
-            "34": 1,
-            "35": 1
+            "25": 10,
+            "26": 10,
+            "28": 10,
+            "29": 2,
+            "31": 8,
+            "32": 8,
+            "34": 8,
+            "35": 8
           },
           "Branches": [
             {
@@ -488,7 +488,7 @@
               "EndOffset": 27,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 1
+              "Hits": 2
             },
             {
               "Line": 28,
@@ -496,16 +496,16 @@
               "EndOffset": 43,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 1
+              "Hits": 8
             }
           ]
         },
         "System.Void FaleMaisServices.Services.CityServices::.ctor(FaleMaisPersistence.Repositories.Interfaces.ICitiesRepository,AutoMapper.IMapper)": {
           "Lines": {
-            "14": 6,
-            "15": 3,
-            "16": 3,
-            "17": 3
+            "14": 26,
+            "15": 13,
+            "16": 13,
+            "17": 13
           },
           "Branches": []
         }
@@ -515,91 +515,134 @@
       "FaleMaisServices.Services.PriceServices": {
         "FaleMaisServices.ViewModels.PriceViewModel FaleMaisServices.Services.PriceServices::CreatePrice(FaleMaisServices.ViewModels.PriceViewModel)": {
           "Lines": {
-            "20": 2,
-            "21": 2,
-            "22": 2,
-            "23": 2,
-            "24": 2,
-            "25": 1,
-            "27": 1,
-            "28": 1,
-            "30": 1,
-            "31": 1
+            "26": 9,
+            "27": 9,
+            "28": 9,
+            "29": 3,
+            "31": 6,
+            "32": 6,
+            "33": 2,
+            "35": 4,
+            "36": 4,
+            "37": 4,
+            "38": 4,
+            "39": 1,
+            "41": 3,
+            "42": 3,
+            "44": 3,
+            "45": 3
           },
           "Branches": [
             {
-              "Line": 24,
-              "Offset": 31,
-              "EndOffset": 33,
+              "Line": 28,
+              "Offset": 25,
+              "EndOffset": 27,
               "Path": 0,
               "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 28,
+              "Offset": 25,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6
+            },
+            {
+              "Line": 32,
+              "Offset": 67,
+              "EndOffset": 69,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 32,
+              "Offset": 67,
+              "EndOffset": 85,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 4
+            },
+            {
+              "Line": 38,
+              "Offset": 117,
+              "EndOffset": 119,
+              "Path": 0,
+              "Ordinal": 4,
               "Hits": 1
             },
             {
-              "Line": 24,
-              "Offset": 31,
-              "EndOffset": 49,
+              "Line": 38,
+              "Offset": 117,
+              "EndOffset": 135,
               "Path": 1,
-              "Ordinal": 1,
-              "Hits": 1
+              "Ordinal": 5,
+              "Hits": 3
             }
           ]
         },
         "System.Collections.Generic.IEnumerable`1<FaleMaisServices.ViewModels.PriceViewModel> FaleMaisServices.Services.PriceServices::ListPricesFromTo(System.Byte,System.Byte)": {
           "Lines": {
-            "36": 2,
-            "38": 2,
-            "40": 3,
-            "41": 1,
-            "43": 1,
-            "44": 1,
-            "46": 2,
-            "47": 1,
-            "49": 2,
-            "51": 2,
-            "52": 2
+            "50": 4,
+            "52": 4,
+            "54": 6,
+            "55": 2,
+            "56": 2,
+            "57": 2,
+            "59": 4,
+            "60": 2,
+            "62": 4,
+            "64": 4,
+            "65": 4
           },
           "Branches": [
             {
-              "Line": 40,
+              "Line": 54,
               "Offset": 13,
               "EndOffset": 15,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 1
+              "Hits": 2
             },
             {
-              "Line": 40,
+              "Line": 54,
               "Offset": 13,
               "EndOffset": 39,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 2
+              "Hits": 4
             },
             {
-              "Line": 46,
+              "Line": 59,
               "Offset": 47,
               "EndOffset": 49,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 1
+              "Hits": 2
             },
             {
-              "Line": 46,
+              "Line": 59,
               "Offset": 47,
               "EndOffset": 67,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 2
+              "Hits": 4
             }
           ]
         },
-        "System.Void FaleMaisServices.Services.PriceServices::.ctor(FaleMaisPersistence.Repositories.Interfaces.IPricesRepository,AutoMapper.IMapper)": {
+        "System.Void FaleMaisServices.Services.PriceServices::.ctor(FaleMaisPersistence.Repositories.Interfaces.IPricesRepository,FaleMaisPersistence.Repositories.Interfaces.ICitiesRepository,AutoMapper.IMapper)": {
           "Lines": {
-            "15": 8,
-            "16": 4,
-            "17": 4,
-            "18": 4
+            "16": 13,
+            "17": 13,
+            "18": 13,
+            "19": 13,
+            "20": 26,
+            "21": 13,
+            "22": 13,
+            "23": 13,
+            "24": 13
           },
           "Branches": []
         }
@@ -611,25 +654,25 @@
       "FaleMaisPersistence.Repositories.BaseRepository`1": {
         "TClass FaleMaisPersistence.Repositories.BaseRepository`1::Create(TClass)": {
           "Lines": {
-            "11": 0,
-            "12": 0,
-            "14": 0,
-            "16": 0,
-            "17": 0
+            "11": 9,
+            "12": 9,
+            "14": 9,
+            "16": 9,
+            "17": 9
           },
           "Branches": []
         },
         "System.Void FaleMaisPersistence.Repositories.BaseRepository`1::SaveChanges()": {
           "Lines": {
-            "19": 0
+            "19": 9
           },
           "Branches": []
         },
         "System.Void FaleMaisPersistence.Repositories.BaseRepository`1::.ctor(FaleMaisPersistence.Context.FaleMaisDbContext)": {
           "Lines": {
-            "7": 0,
-            "8": 0,
-            "9": 0
+            "7": 48,
+            "8": 24,
+            "9": 24
           },
           "Branches": []
         }
@@ -639,25 +682,25 @@
       "FaleMaisPersistence.Repositories.CitiesRepository": {
         "FaleMaisDomain.Entities.City FaleMaisPersistence.Repositories.CitiesRepository::FindByAreaCode(System.Byte)": {
           "Lines": {
-            "11": 0,
-            "12": 0,
-            "14": 0,
-            "15": 0
+            "11": 17,
+            "12": 17,
+            "14": 17,
+            "15": 17
           },
           "Branches": []
         },
         "System.Collections.Generic.IEnumerable`1<FaleMaisDomain.Entities.City> FaleMaisPersistence.Repositories.CitiesRepository::FindAll()": {
           "Lines": {
-            "17": 0,
-            "18": 0,
-            "20": 0,
-            "21": 0
+            "17": 1,
+            "18": 1,
+            "20": 1,
+            "21": 1
           },
           "Branches": []
         },
         "System.Void FaleMaisPersistence.Repositories.CitiesRepository::.ctor(FaleMaisPersistence.Context.FaleMaisDbContext)": {
           "Lines": {
-            "9": 0
+            "9": 51
           },
           "Branches": []
         }
@@ -667,30 +710,30 @@
       "FaleMaisPersistence.Repositories.PricesRepository": {
         "FaleMaisDomain.Entities.Price FaleMaisPersistence.Repositories.PricesRepository::FindByFromToAreaCode(System.Byte,System.Byte)": {
           "Lines": {
-            "12": 0,
-            "13": 0,
-            "14": 0,
-            "15": 0,
-            "17": 0,
-            "18": 0
+            "12": 4,
+            "13": 4,
+            "14": 4,
+            "15": 4,
+            "17": 4,
+            "18": 4
           },
           "Branches": []
         },
         "System.Collections.Generic.IEnumerable`1<FaleMaisDomain.Entities.Price> FaleMaisPersistence.Repositories.PricesRepository::FindByFromToAreaCodeWithCities(System.Byte)": {
           "Lines": {
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0,
-            "26": 0,
-            "27": 0
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "26": 1,
+            "27": 1
           },
           "Branches": []
         },
         "System.Void FaleMaisPersistence.Repositories.PricesRepository::.ctor(FaleMaisPersistence.Context.FaleMaisDbContext)": {
           "Lines": {
-            "10": 0
+            "10": 21
           },
           "Branches": []
         }
@@ -700,27 +743,27 @@
       "FaleMaisPersistence.Mappings.CityMapping": {
         "System.Void FaleMaisPersistence.Mappings.CityMapping::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<FaleMaisDomain.Entities.City>)": {
           "Lines": {
-            "8": 0,
-            "9": 0,
-            "11": 0,
-            "12": 0,
-            "13": 0,
-            "14": 0,
-            "15": 0,
-            "16": 0,
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0
+            "8": 1,
+            "9": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "28": 1,
+            "29": 1
           },
           "Branches": []
         }
@@ -730,39 +773,39 @@
       "FaleMaisPersistence.Mappings.PriceMapping": {
         "System.Void FaleMaisPersistence.Mappings.PriceMapping::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<FaleMaisDomain.Entities.Price>)": {
           "Lines": {
-            "8": 0,
-            "9": 0,
-            "11": 0,
-            "12": 0,
-            "13": 0,
-            "14": 0,
-            "15": 0,
-            "16": 0,
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "39": 0,
-            "40": 0,
-            "41": 0,
-            "42": 0,
-            "43": 0
+            "8": 1,
+            "9": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "39": 1,
+            "40": 1,
+            "41": 1,
+            "42": 1,
+            "43": 1
           },
           "Branches": []
         }
@@ -772,28 +815,28 @@
       "FaleMaisPersistence.Context.FaleMaisDbContext": {
         "Microsoft.EntityFrameworkCore.DbSet`1<FaleMaisDomain.Entities.City> FaleMaisPersistence.Context.FaleMaisDbContext::get_Cities()": {
           "Lines": {
-            "7": 0
+            "7": 39
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<FaleMaisDomain.Entities.Price> FaleMaisPersistence.Context.FaleMaisDbContext::get_Prices()": {
           "Lines": {
-            "8": 0
+            "8": 26
           },
           "Branches": []
         },
         "System.Void FaleMaisPersistence.Context.FaleMaisDbContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
           "Lines": {
-            "13": 0,
-            "14": 0,
-            "15": 0,
-            "16": 0
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1
           },
           "Branches": []
         },
         "System.Void FaleMaisPersistence.Context.FaleMaisDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<FaleMaisPersistence.Context.FaleMaisDbContext>)": {
           "Lines": {
-            "11": 0
+            "11": 63
           },
           "Branches": []
         }
@@ -1647,31 +1690,31 @@
       "FaleMaisDomain.Entities.City": {
         "System.Byte FaleMaisDomain.Entities.City::get_AreaCode()": {
           "Lines": {
-            "6": 25
+            "6": 45
           },
           "Branches": []
         },
         "System.String FaleMaisDomain.Entities.City::get_Name()": {
           "Lines": {
-            "7": 25
+            "7": 45
           },
           "Branches": []
         },
         "System.Nullable`1<System.DateTime> FaleMaisDomain.Entities.City::get_CreatedAt()": {
           "Lines": {
-            "8": 0
+            "8": 23
           },
           "Branches": []
         },
         "System.Nullable`1<System.DateTime> FaleMaisDomain.Entities.City::get_UpdatedAt()": {
           "Lines": {
-            "9": 0
+            "9": 23
           },
           "Branches": []
         },
         "System.Nullable`1<System.DateTime> FaleMaisDomain.Entities.City::get_DeletedAt()": {
           "Lines": {
-            "10": 0
+            "10": 23
           },
           "Branches": []
         },
@@ -1693,43 +1736,43 @@
       "FaleMaisDomain.Entities.Price": {
         "System.String FaleMaisDomain.Entities.Price::get_Id()": {
           "Lines": {
-            "5": 15
+            "5": 13
           },
           "Branches": []
         },
         "System.Byte FaleMaisDomain.Entities.Price::get_FromAreaCode()": {
           "Lines": {
-            "6": 27
+            "6": 17
           },
           "Branches": []
         },
         "System.Byte FaleMaisDomain.Entities.Price::get_ToAreaCode()": {
           "Lines": {
-            "7": 26
+            "7": 16
           },
           "Branches": []
         },
         "System.Double FaleMaisDomain.Entities.Price::get_PricePerMinute()": {
           "Lines": {
-            "8": 15
+            "8": 13
           },
           "Branches": []
         },
         "System.Nullable`1<System.DateTime> FaleMaisDomain.Entities.Price::get_CreatedAt()": {
           "Lines": {
-            "9": 0
+            "9": 7
           },
           "Branches": []
         },
         "System.Nullable`1<System.DateTime> FaleMaisDomain.Entities.Price::get_UpdatedAt()": {
           "Lines": {
-            "10": 0
+            "10": 7
           },
           "Branches": []
         },
         "System.Nullable`1<System.DateTime> FaleMaisDomain.Entities.Price::get_DeletedAt()": {
           "Lines": {
-            "11": 0
+            "11": 7
           },
           "Branches": []
         },
@@ -1741,7 +1784,7 @@
         },
         "FaleMaisDomain.Entities.City FaleMaisDomain.Entities.Price::get_ToCity()": {
           "Lines": {
-            "14": 0
+            "14": 6
           },
           "Branches": []
         }

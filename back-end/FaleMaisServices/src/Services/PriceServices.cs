@@ -10,14 +10,28 @@ using FaleMaisServices.ViewModels;
 namespace FaleMaisServices.Services {
   public class PriceServices : IPriceServices {
     private readonly IPricesRepository pricesRepository;
+    private readonly ICitiesRepository citiesRepository;
     private readonly IMapper mapper;
 
-    public PriceServices(IPricesRepository pricesRepository, IMapper mapper) {
+    public PriceServices(
+      IPricesRepository pricesRepository,
+      ICitiesRepository citiesRepository,
+      IMapper mapper
+      ) {
       this.pricesRepository = pricesRepository;
+      this.citiesRepository = citiesRepository;
       this.mapper = mapper;
     }
 
     public PriceViewModel CreatePrice(PriceViewModel data) {
+      var city = citiesRepository.FindByAreaCode(data.FromAreaCode);
+      if (city == null)
+        throw new FaleMaisException("Origin city for call not found", 404);
+
+      city = citiesRepository.FindByAreaCode(data.ToAreaCode);
+      if (city == null)
+        throw new FaleMaisException("Destiny city for call not found", 404);
+
       var price = pricesRepository.FindByFromToAreaCode(
         data.FromAreaCode, data.ToAreaCode
       );
