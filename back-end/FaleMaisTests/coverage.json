@@ -128,26 +128,27 @@
     },
     "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisAPI/src/Middlewares/ExceptionHandler.cs": {
       "FaleMaisAPI.Middlewares.ExceptionHandler": {
-        "System.Void FaleMaisAPI.Middlewares.ExceptionHandler::HandleFaleMaisException(FaleMaisServices.Exceptions.FaleMaisException)": {
+        "System.Threading.Tasks.Task FaleMaisAPI.Middlewares.ExceptionHandler::HandleFaleMaisException(Microsoft.AspNetCore.Http.HttpContext,FaleMaisServices.Exceptions.FaleMaisException)": {
           "Lines": {
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
             "37": 0,
             "38": 0,
             "39": 0,
             "40": 0,
-            "41": 0,
             "42": 0,
             "43": 0,
-            "44": 0,
             "45": 0,
-            "46": 0,
-            "47": 0
+            "46": 0
           },
           "Branches": []
         },
-        "System.Void FaleMaisAPI.Middlewares.ExceptionHandler::HandleUnknownException(System.Exception)": {
+        "System.Threading.Tasks.Task FaleMaisAPI.Middlewares.ExceptionHandler::HandleUnknownException(Microsoft.AspNetCore.Http.HttpContext,System.Exception)": {
           "Lines": {
-            "49": 0,
-            "50": 0,
             "51": 0,
             "52": 0,
             "53": 0,
@@ -157,21 +158,26 @@
             "57": 0,
             "58": 0,
             "59": 0,
-            "60": 0
+            "60": 0,
+            "61": 0,
+            "63": 0,
+            "64": 0,
+            "66": 0,
+            "67": 0
           },
           "Branches": [
             {
-              "Line": 50,
-              "Offset": 24,
-              "EndOffset": 26,
+              "Line": 52,
+              "Offset": 23,
+              "EndOffset": 25,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 0
             },
             {
-              "Line": 50,
-              "Offset": 24,
-              "EndOffset": 29,
+              "Line": 52,
+              "Offset": 23,
+              "EndOffset": 28,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
@@ -180,67 +186,28 @@
         },
         "System.Void FaleMaisAPI.Middlewares.ExceptionHandler::.ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)": {
           "Lines": {
+            "12": 0,
             "14": 0,
-            "16": 0,
-            "17": 0,
-            "18": 0
+            "15": 0,
+            "16": 0
           },
           "Branches": []
         }
       },
-      "FaleMaisAPI.Middlewares.ExceptionHandler/<InvokeAsync>d__5": {
-        "System.Void FaleMaisAPI.Middlewares.ExceptionHandler/<InvokeAsync>d__5::MoveNext()": {
+      "FaleMaisAPI.Middlewares.ExceptionHandler/<InvokeAsync>d__3": {
+        "System.Void FaleMaisAPI.Middlewares.ExceptionHandler/<InvokeAsync>d__3::MoveNext()": {
           "Lines": {
+            "18": 0,
+            "19": 0,
             "20": 0,
             "21": 0,
             "22": 0,
             "23": 0,
             "24": 0,
             "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0
+            "26": 0
           },
-          "Branches": [
-            {
-              "Line": 34,
-              "Offset": 479,
-              "EndOffset": 481,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 34,
-              "Offset": 492,
-              "EndOffset": 494,
-              "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
-            },
-            {
-              "Line": 34,
-              "Offset": 492,
-              "EndOffset": 497,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            },
-            {
-              "Line": 34,
-              "Offset": 479,
-              "EndOffset": 510,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
+          "Branches": []
         }
       }
     },
@@ -290,17 +257,17 @@
       "FaleMaisAPI.Controllers.PricesController": {
         "Microsoft.AspNetCore.Mvc.ActionResult`1<FaleMaisServices.ViewModels.PriceViewModel> FaleMaisAPI.Controllers.PricesController::Create(FaleMaisServices.Services.Interfaces.IPriceServices,FaleMaisServices.ViewModels.PriceViewModel)": {
           "Lines": {
-            "13": 2,
-            "14": 2,
             "16": 2,
-            "17": 1,
-            "19": 1,
-            "21": 1,
-            "22": 2
+            "17": 2,
+            "19": 2,
+            "20": 1,
+            "22": 1,
+            "24": 1,
+            "25": 2
           },
           "Branches": [
             {
-              "Line": 16,
+              "Line": 19,
               "Offset": 16,
               "EndOffset": 18,
               "Path": 0,
@@ -308,12 +275,59 @@
               "Hits": 1
             },
             {
-              "Line": 16,
+              "Line": 19,
               "Offset": 16,
               "EndOffset": 38,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 1
+            }
+          ]
+        },
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<System.Collections.Generic.IEnumerable`1<FaleMaisServices.ViewModels.PriceViewModel>> FaleMaisAPI.Controllers.PricesController::GetPrices(FaleMaisServices.Services.Interfaces.IPriceServices,System.Byte,System.Byte)": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "41": 0,
+            "43": 0,
+            "44": 0
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 3,
+              "EndOffset": 5,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 3,
+              "EndOffset": 12,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 15,
+              "EndOffset": 17,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 15,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
             }
           ]
         }
@@ -354,13 +368,13 @@
       "FaleMaisServices.ViewModels.CityViewModel": {
         "System.Byte FaleMaisServices.ViewModels.CityViewModel::get_AreaCode()": {
           "Lines": {
-            "6": 30
+            "6": 29
           },
           "Branches": []
         },
         "System.String FaleMaisServices.ViewModels.CityViewModel::get_Name()": {
           "Lines": {
-            "7": 24
+            "7": 23
           },
           "Branches": []
         },
@@ -390,32 +404,36 @@
       "FaleMaisServices.ViewModels.PriceViewModel": {
         "System.String FaleMaisServices.ViewModels.PriceViewModel::get_Id()": {
           "Lines": {
-            "6": 7
+            "7": 18
           },
           "Branches": []
         },
         "System.Byte FaleMaisServices.ViewModels.PriceViewModel::get_FromAreaCode()": {
           "Lines": {
-            "7": 23
+            "8": 34
           },
           "Branches": []
         },
         "System.Byte FaleMaisServices.ViewModels.PriceViewModel::get_ToAreaCode()": {
           "Lines": {
-            "8": 20
+            "9": 31
           },
           "Branches": []
         },
         "System.Double FaleMaisServices.ViewModels.PriceViewModel::get_PricePerMinute()": {
           "Lines": {
-            "9": 6
+            "10": 17
+          },
+          "Branches": []
+        },
+        "FaleMaisDomain.Entities.City FaleMaisServices.ViewModels.PriceViewModel::get_ToCity()": {
+          "Lines": {
+            "11": 0
           },
           "Branches": []
         },
         "System.Void FaleMaisServices.ViewModels.PriceViewModel::Validate()": {
           "Lines": {
-            "11": 2,
-            "12": 2,
             "13": 2,
             "14": 2,
             "15": 2,
@@ -433,7 +451,9 @@
             "27": 2,
             "28": 2,
             "29": 2,
-            "30": 2
+            "30": 2,
+            "31": 2,
+            "32": 2
           },
           "Branches": []
         }
@@ -495,20 +515,20 @@
       "FaleMaisServices.Services.PriceServices": {
         "FaleMaisServices.ViewModels.PriceViewModel FaleMaisServices.Services.PriceServices::CreatePrice(FaleMaisServices.ViewModels.PriceViewModel)": {
           "Lines": {
-            "18": 2,
-            "19": 2,
             "20": 2,
             "21": 2,
             "22": 2,
-            "23": 1,
+            "23": 2,
+            "24": 2,
             "25": 1,
-            "26": 1,
+            "27": 1,
             "28": 1,
-            "29": 1
+            "30": 1,
+            "31": 1
           },
           "Branches": [
             {
-              "Line": 22,
+              "Line": 24,
               "Offset": 31,
               "EndOffset": 33,
               "Path": 0,
@@ -516,7 +536,7 @@
               "Hits": 1
             },
             {
-              "Line": 22,
+              "Line": 24,
               "Offset": 31,
               "EndOffset": 49,
               "Path": 1,
@@ -525,12 +545,61 @@
             }
           ]
         },
+        "System.Collections.Generic.IEnumerable`1<FaleMaisServices.ViewModels.PriceViewModel> FaleMaisServices.Services.PriceServices::ListPricesFromTo(System.Byte,System.Byte)": {
+          "Lines": {
+            "36": 2,
+            "38": 2,
+            "40": 3,
+            "41": 1,
+            "43": 1,
+            "44": 1,
+            "46": 2,
+            "47": 1,
+            "49": 2,
+            "51": 2,
+            "52": 2
+          },
+          "Branches": [
+            {
+              "Line": 40,
+              "Offset": 13,
+              "EndOffset": 15,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 40,
+              "Offset": 13,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 46,
+              "Offset": 47,
+              "EndOffset": 49,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 46,
+              "Offset": 47,
+              "EndOffset": 67,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            }
+          ]
+        },
         "System.Void FaleMaisServices.Services.PriceServices::.ctor(FaleMaisPersistence.Repositories.Interfaces.IPricesRepository,AutoMapper.IMapper)": {
           "Lines": {
-            "13": 4,
-            "14": 2,
-            "15": 2,
-            "16": 2
+            "15": 8,
+            "16": 4,
+            "17": 4,
+            "18": 4
           },
           "Branches": []
         }
@@ -598,18 +667,30 @@
       "FaleMaisPersistence.Repositories.PricesRepository": {
         "FaleMaisDomain.Entities.Price FaleMaisPersistence.Repositories.PricesRepository::FindByFromToAreaCode(System.Byte,System.Byte)": {
           "Lines": {
-            "10": 0,
-            "11": 0,
             "12": 0,
             "13": 0,
+            "14": 0,
             "15": 0,
-            "16": 0
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<FaleMaisDomain.Entities.Price> FaleMaisPersistence.Repositories.PricesRepository::FindByFromToAreaCodeWithCities(System.Byte)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0
           },
           "Branches": []
         },
         "System.Void FaleMaisPersistence.Repositories.PricesRepository::.ctor(FaleMaisPersistence.Context.FaleMaisDbContext)": {
           "Lines": {
-            "8": 0
+            "10": 0
           },
           "Branches": []
         }
@@ -893,6 +974,570 @@
         }
       }
     },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisPersistence/Migrations/20200901212738_FixPriceColumnTypo.cs": {
+      "FaleMaisPersistence.Migrations.FixPriceColumnTypo": {
+        "System.Void FaleMaisPersistence.Migrations.FixPriceColumnTypo::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0
+          },
+          "Branches": []
+        },
+        "System.Void FaleMaisPersistence.Migrations.FixPriceColumnTypo::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "197": 0,
+            "198": 0,
+            "199": 0,
+            "200": 0,
+            "201": 0,
+            "202": 0,
+            "203": 0,
+            "204": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisPersistence/Migrations/20200901212738_FixPriceColumnTypo.Designer.cs": {
+      "FaleMaisPersistence.Migrations.FixPriceColumnTypo": {
+        "System.Void FaleMaisPersistence.Migrations.FixPriceColumnTypo::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "119": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisPersistence/Migrations/20200901213808_AlterTablesRelations2.cs": {
+      "FaleMaisPersistence.Migrations.AlterTablesRelations2": {
+        "System.Void FaleMaisPersistence.Migrations.AlterTablesRelations2::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0
+          },
+          "Branches": []
+        },
+        "System.Void FaleMaisPersistence.Migrations.AlterTablesRelations2::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "176": 0,
+            "177": 0,
+            "178": 0,
+            "179": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisPersistence/Migrations/20200901213808_AlterTablesRelations2.Designer.cs": {
+      "FaleMaisPersistence.Migrations.AlterTablesRelations2": {
+        "System.Void FaleMaisPersistence.Migrations.AlterTablesRelations2::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "115": 0
+          },
+          "Branches": []
+        }
+      }
+    },
     "/home/bernardo/Desktop/LOLDesign/back-end/FaleMaisPersistence/Migrations/FaleMaisDbContextModelSnapshot.cs": {
       "FaleMaisPersistence.Migrations.FaleMaisDbContextModelSnapshot": {
         "System.Void FaleMaisPersistence.Migrations.FaleMaisDbContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
@@ -1002,13 +1647,13 @@
       "FaleMaisDomain.Entities.City": {
         "System.Byte FaleMaisDomain.Entities.City::get_AreaCode()": {
           "Lines": {
-            "6": 27
+            "6": 25
           },
           "Branches": []
         },
         "System.String FaleMaisDomain.Entities.City::get_Name()": {
           "Lines": {
-            "7": 27
+            "7": 25
           },
           "Branches": []
         },
@@ -1048,25 +1693,25 @@
       "FaleMaisDomain.Entities.Price": {
         "System.String FaleMaisDomain.Entities.Price::get_Id()": {
           "Lines": {
-            "5": 3
+            "5": 15
           },
           "Branches": []
         },
         "System.Byte FaleMaisDomain.Entities.Price::get_FromAreaCode()": {
           "Lines": {
-            "6": 0
+            "6": 27
           },
           "Branches": []
         },
         "System.Byte FaleMaisDomain.Entities.Price::get_ToAreaCode()": {
           "Lines": {
-            "7": 0
+            "7": 26
           },
           "Branches": []
         },
         "System.Double FaleMaisDomain.Entities.Price::get_PricePerMinute()": {
           "Lines": {
-            "8": 0
+            "8": 15
           },
           "Branches": []
         },

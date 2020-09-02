@@ -33,12 +33,12 @@ namespace FaleMaisPersistence.Mappings {
 
       builder.HasOne(p => p.FromCity)
         .WithMany(c => c.PricesToFrom)
-        // .HasForeignKey(p => p.FromAreaCode)
+        .HasForeignKey(p => p.FromAreaCode)
         .OnDelete(DeleteBehavior.Cascade);
 
       builder.HasOne(p => p.ToCity)
         .WithMany(c => c.PricesFromTo)
-        // .HasForeignKey(p => p.ToAreaCode)
+        .HasForeignKey(p => p.ToAreaCode)
         .OnDelete(DeleteBehavior.Cascade);
     }
   }

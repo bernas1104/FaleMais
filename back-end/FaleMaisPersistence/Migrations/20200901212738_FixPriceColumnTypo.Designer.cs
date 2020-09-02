@@ -3,15 +3,17 @@ using System;
 using FaleMaisPersistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace FaleMaisPersistence.Migrations
 {
     [DbContext(typeof(FaleMaisDbContext))]
-    partial class FaleMaisDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200901212738_FixPriceColumnTypo")]
+    partial class FixPriceColumnTypo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,7 +31,7 @@ namespace FaleMaisPersistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("created_at")
                         .HasColumnType("timestamp without time zone")
-                        .HasDefaultValue(new DateTime(2020, 9, 1, 18, 38, 7, 970, DateTimeKind.Local).AddTicks(218));
+                        .HasDefaultValue(new DateTime(2020, 9, 1, 18, 27, 38, 660, DateTimeKind.Local).AddTicks(2407));
 
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnName("deleted_at")
@@ -45,7 +47,7 @@ namespace FaleMaisPersistence.Migrations
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnName("updated_at")
                         .HasColumnType("timestamp without time zone")
-                        .HasDefaultValue(new DateTime(2020, 9, 1, 18, 38, 7, 974, DateTimeKind.Local).AddTicks(6429));
+                        .HasDefaultValue(new DateTime(2020, 9, 1, 18, 27, 38, 664, DateTimeKind.Local).AddTicks(8302));
 
                     b.HasKey("AreaCode");
 
@@ -62,7 +64,7 @@ namespace FaleMaisPersistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("created_at")
                         .HasColumnType("timestamp without time zone")
-                        .HasDefaultValue(new DateTime(2020, 9, 1, 18, 38, 7, 978, DateTimeKind.Local).AddTicks(584));
+                        .HasDefaultValue(new DateTime(2020, 9, 1, 18, 27, 38, 667, DateTimeKind.Local).AddTicks(9541));
 
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnName("deleted_at")
@@ -70,6 +72,9 @@ namespace FaleMaisPersistence.Migrations
 
                     b.Property<byte>("FromAreaCode")
                         .HasColumnName("from_area_code")
+                        .HasColumnType("smallint");
+
+                    b.Property<byte?>("FromCityAreaCode")
                         .HasColumnType("smallint");
 
                     b.Property<float>("PricePerMinute")
@@ -80,17 +85,20 @@ namespace FaleMaisPersistence.Migrations
                         .HasColumnName("to_area_code")
                         .HasColumnType("smallint");
 
+                    b.Property<byte?>("ToCityAreaCode")
+                        .HasColumnType("smallint");
+
                     b.Property<DateTime?>("UpdatedAt")
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnName("updated_at")
                         .HasColumnType("timestamp without time zone")
-                        .HasDefaultValue(new DateTime(2020, 9, 1, 18, 38, 7, 978, DateTimeKind.Local).AddTicks(983));
+                        .HasDefaultValue(new DateTime(2020, 9, 1, 18, 27, 38, 667, DateTimeKind.Local).AddTicks(9847));
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FromAreaCode");
+                    b.HasIndex("FromCityAreaCode");
 
-                    b.HasIndex("ToAreaCode");
+                    b.HasIndex("ToCityAreaCode");
 
                     b.ToTable("Prices");
                 });
@@ -99,15 +107,13 @@ namespace FaleMaisPersistence.Migrations
                 {
                     b.HasOne("FaleMaisDomain.Entities.City", "FromCity")
                         .WithMany("PricesToFrom")
-                        .HasForeignKey("FromAreaCode")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("FromCityAreaCode")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("FaleMaisDomain.Entities.City", "ToCity")
                         .WithMany("PricesFromTo")
-                        .HasForeignKey("ToAreaCode")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ToCityAreaCode")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
