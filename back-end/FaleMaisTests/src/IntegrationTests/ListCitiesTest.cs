@@ -5,13 +5,13 @@ using FaleMaisAPI;
 using Xunit;
 
 namespace FaleMaisTests.IntegrationTests {
-  public class ListCitiesTest : IClassFixture<CustomWebApplicationFactory<Startup>> {
+  public class ListAreaCodesTest : IClassFixture<CustomWebApplicationFactory<Startup>> {
     private readonly CustomWebApplicationFactory<Startup> factory;
     private readonly HttpClient client;
-    private readonly string route = "v1/cities";
+    private readonly string route = "v1/areacodes";
     private readonly int action = 1;
 
-    public ListCitiesTest(CustomWebApplicationFactory<Startup> factory) {
+    public ListAreaCodesTest(CustomWebApplicationFactory<Startup> factory) {
       this.factory = factory;
       client = factory.CreateClient();
     }

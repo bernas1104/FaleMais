@@ -6,13 +6,13 @@ using FaleMaisTests.Bogus.ViewModels;
 using Xunit;
 
 namespace FaleMaisTests.IntegrationTests {
-  public class GetPricesTest : IClassFixture<CustomWebApplicationFactory<Startup>> {
+  public class GetPriceTest : IClassFixture<CustomWebApplicationFactory<Startup>> {
     private readonly CustomWebApplicationFactory<Startup> factory;
     private readonly HttpClient client;
-    private readonly string route = "v1/prices/";
+    private readonly string route = "v1/calls";
     private readonly int action = 1;
 
-    public GetPricesTest(CustomWebApplicationFactory<Startup> factory) {
+    public GetPriceTest(CustomWebApplicationFactory<Startup> factory) {
       this.factory = factory;
       client = factory.CreateClient();
     }
@@ -22,17 +22,21 @@ namespace FaleMaisTests.IntegrationTests {
       var response = await factory.PerformRequest(
         client,
         action,
-        route + "61?to-area-code=62"
+        route + "?from-area-code=68&to-area-code=82"
       );
 
       Assert.Equal(HttpStatusCode.OK, response.StatusCode);
     }
 
     [Fact]
-    public async Task Should_Return_200_Status_Code_When_Prices_From_Are_Request() {
-      var response = await factory.PerformRequest(client, action, route + "61");
+    public async Task Should_Return_404_Status_Code_If_Call_Price_Not_Exist() {
+      var response = await factory.PerformRequest(
+        client,
+        action,
+        route + "?from-area-code=62&to-area-code=82"
+      );
 
-      Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+      Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
     }
   }
 }

@@ -5,8 +5,8 @@ using FaleMaisServices.ViewModels;
 namespace FaleMaisAPI.Configurations {
   public class AutoMapperConfiguration : Profile {
     public AutoMapperConfiguration() {
-      CreateMap<CityViewModel, City>().ReverseMap();
-      CreateMap<PriceViewModel, Price>().ReverseMap();
+      CreateMap<AreaCodeViewModel, AreaCode>().ReverseMap();
+      CreateMap<CallViewModel, Call>().ReverseMap();
     }
   }
 }

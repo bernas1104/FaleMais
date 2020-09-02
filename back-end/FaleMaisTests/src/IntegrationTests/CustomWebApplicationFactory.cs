@@ -58,18 +58,25 @@ namespace FaleMaisTests.IntegrationTests {
       string route,
       object data = null
     ) {
+      StringContent json = null;
+      if (action == 2 || action == 3) {
+        json = new StringContent(
+          JsonConvert.SerializeObject(data),
+          Encoding.UTF8
+        ) {
+          Headers = {
+            ContentType = new MediaTypeHeaderValue(ContentType)
+          }
+        };
+      }
+
       switch(action) {
         case 1: // Get
           return await client.GetAsync(route);
         case 2: // Post
-          return await client.PostAsync(route, new StringContent(
-            JsonConvert.SerializeObject(data),
-            Encoding.UTF8
-          ) {
-            Headers = {
-              ContentType = new MediaTypeHeaderValue(ContentType)
-            }
-          });
+          return await client.PostAsync(route, json);
+        case 3: // Patch
+          return await client.PatchAsync(route, json);
         default:
           throw new Exception("Action not registered");
       }

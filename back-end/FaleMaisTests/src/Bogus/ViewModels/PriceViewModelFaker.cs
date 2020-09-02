@@ -5,10 +5,9 @@ using FaleMaisDomain.Entities;
 using FaleMaisServices.ViewModels;
 
 namespace FaleMaisTests.Bogus.ViewModels {
-  public static class PriceViewModelFaker {
-    public static PriceViewModel GeneratePriceViewModel() {
-      var priceViewModel = new Faker<PriceViewModel>()
-        .RuleFor(x => x.Id, () => Guid.NewGuid().ToString())
+  public static class CallViewModelFaker {
+    public static CallViewModel GenerateCallViewModel() {
+      var priceViewModel = new Faker<CallViewModel>()
         .RuleFor(x => x.FromAreaCode, (f) => f.Random.Byte(1, 100))
         .RuleFor(x => x.ToAreaCode, (f, u) => {
           byte value = f.Random.Byte(1, 100);
@@ -18,14 +17,13 @@ namespace FaleMaisTests.Bogus.ViewModels {
 
           return value;
         })
-        .RuleFor(x => x.PricePerMinute, (f) => f.Random.Double() * 10);
+        .RuleFor(x => x.PricePerMinute, (f) => f.Random.Double() * 9);
 
       return priceViewModel.Generate();
     }
 
-    public static PriceViewModel GeneratePriceViewModel(Price info) {
-      var priceViewModel = new Faker<PriceViewModel>()
-        .RuleFor(x => x.Id, () => info.Id)
+    public static CallViewModel GenerateCallViewModel(Call info) {
+      var priceViewModel = new Faker<CallViewModel>()
         .RuleFor(x => x.FromAreaCode, () => info.FromAreaCode)
         .RuleFor(x => x.ToAreaCode, () => info.ToAreaCode)
         .RuleFor(x => x.PricePerMinute, () => info.PricePerMinute);
@@ -33,14 +31,13 @@ namespace FaleMaisTests.Bogus.ViewModels {
       return priceViewModel.Generate();
     }
 
-    public static IEnumerable<PriceViewModel> GeneratePriceViewModels(
+    public static IEnumerable<CallViewModel> GenerateCallViewModels(
       byte fromAreaCode,
-      IEnumerable<Price> prices
+      IEnumerable<Call> prices
     ) {
-      IList<PriceViewModel> generated = new List<PriceViewModel>();
+      IList<CallViewModel> generated = new List<CallViewModel>();
 
-      var priceViewModels = new Faker<PriceViewModel>()
-        .RuleFor(x => x.Id, () => Guid.NewGuid().ToString())
+      var priceViewModels = new Faker<CallViewModel>()
         .RuleFor(x => x.FromAreaCode, () => fromAreaCode)
         .RuleFor(x => x.PricePerMinute, (f) => f.Random.Double() * 10);
 

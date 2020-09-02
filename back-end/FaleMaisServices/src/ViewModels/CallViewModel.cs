@@ -1,14 +1,11 @@
-using FaleMaisDomain.Entities;
 using Flunt.Notifications;
 using Flunt.Validations;
 
 namespace FaleMaisServices.ViewModels {
-  public class PriceViewModel : Notifiable, IValidatable {
-    public string Id { get; set; }
+  public class CallViewModel : Notifiable, IValidatable {
     public byte FromAreaCode { get; set; }
     public byte ToAreaCode { get; set; }
     public double PricePerMinute { get; set; }
-    public City ToCity { get; set; }
 
     public void Validate() {
       AddNotifications(
@@ -26,6 +23,15 @@ namespace FaleMaisServices.ViewModels {
             )
             .AreNotEquals(
               ToAreaCode, FromAreaCode, "To Area Code", "Must be different than 'From Area Code'"
+            )
+          ))
+          .IsNotNull(PricePerMinute, "Price Per Minute", "Is required")
+          .IfNotNull(PricePerMinute, contract => (
+            contract.IsBetween(
+              PricePerMinute,
+              0.01D, 10.00D,
+              "Price Per Minute",
+              "Must be a number between 0.01 and 10.00"
             )
           ))
       );

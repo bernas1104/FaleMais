@@ -4,11 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FaleMaisPersistence.Mappings {
-  public class PriceMapping : IEntityTypeConfiguration<Price> {
-    public void Configure(EntityTypeBuilder<Price> builder) {
-      builder.HasKey(x => x.Id);
+  public class CallMapping : IEntityTypeConfiguration<Call> {
+    public void Configure(EntityTypeBuilder<Call> builder) {
+      builder.HasKey(x => new { x.FromAreaCode, x.ToAreaCode });
 
-      builder.Property(x => x.Id).ValueGeneratedOnAdd();
       builder.Property(x => x.FromAreaCode)
         .HasColumnName("from_area_code")
         .IsRequired();
@@ -31,15 +30,13 @@ namespace FaleMaisPersistence.Mappings {
         .IsRequired(false)
         .HasColumnName("deleted_at");
 
-      builder.HasOne(p => p.FromCity)
-        .WithMany(c => c.PricesToFrom)
-        .HasForeignKey(p => p.FromAreaCode)
-        .OnDelete(DeleteBehavior.Cascade);
+      builder.HasOne(c => c.From)
+        .WithMany(ac => ac.FromTo)
+        .HasForeignKey(c => c.FromAreaCode);
 
-      builder.HasOne(p => p.ToCity)
-        .WithMany(c => c.PricesFromTo)
-        .HasForeignKey(p => p.ToAreaCode)
-        .OnDelete(DeleteBehavior.Cascade);
+      builder.HasOne(c => c.To)
+        .WithMany(ac => ac.ToFrom)
+        .HasForeignKey(c => c.ToAreaCode);
     }
   }
 }

@@ -9,11 +9,11 @@ namespace FaleMaisAPI.Configurations {
     public static IServiceCollection ResolveDependencies(
       this IServiceCollection services
     ) {
-      services.AddScoped<ICitiesRepository, CitiesRepository>();
-      services.AddScoped<IPricesRepository, PricesRepository>();
+      services.AddScoped<IAreaCodesRepository, AreaCodesRepository>();
+      services.AddScoped<ICallsRepository, CallsRepository>();
 
-      services.AddTransient<ICityServices, CityServices>();
-      services.AddTransient<IPriceServices, PriceServices>();
+      services.AddTransient<IAreaCodeServices, AreaCodeServices>();
+      services.AddTransient<ICallServices, CallServices>();
 
       return services;
     }

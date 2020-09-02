@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FaleMaisPersistence.Mappings {
-  public class CityMapping : IEntityTypeConfiguration<City> {
-    public void Configure(EntityTypeBuilder<City> builder) {
-      builder.HasKey(x => x.AreaCode);
+  public class AreaCodeMapping : IEntityTypeConfiguration<AreaCode> {
+    public void Configure(EntityTypeBuilder<AreaCode> builder) {
+      builder.HasKey(x => x.Id);
 
-      builder.Property(x => x.AreaCode)
+      builder.Property(x => x.Id)
         .HasColumnName("area_code")
         .HasColumnType("smallint");
       builder.Property(x => x.Name)
