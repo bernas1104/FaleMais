@@ -10,8 +10,8 @@ import { FiChevronDown } from 'react-icons/fi';
 import { Container, Overlay, OptionsContainer } from './styles';
 
 interface SelectOption {
-  id: string | number;
-  option: string;
+  id: number;
+  value: string;
 }
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
@@ -20,7 +20,7 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   enabled?: boolean;
   handleSelect: (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-    option: string,
+    value: string,
   ) => void;
 }
 
@@ -69,7 +69,7 @@ const Select: React.FC<SelectProps> = ({
         <select name={id} id={id} ref={selectRef}>
           {selectOptions.map(option => (
             <option key={option.id} value={option.id}>
-              {option.option}
+              {option.value}
             </option>
           ))}
         </select>
@@ -77,11 +77,11 @@ const Select: React.FC<SelectProps> = ({
         <OptionsContainer selectActive={isFocused}>
           {selectOptions.map(option => (
             <a
-              href={`#${option.option}`}
+              href={`#${option.value}`}
               key={option.id}
-              onClick={e => handleSelect(e, option.option)}
+              onClick={e => handleSelect(e, String(option.value))}
             >
-              {option.option}
+              {option.value}
             </a>
           ))}
         </OptionsContainer>

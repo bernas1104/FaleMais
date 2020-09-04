@@ -37,9 +37,8 @@ export const Container = styled.div<ContainerProps>`
   }
 
   input {
-    flex: 1;
+    width: 100%;
     border: 0;
-    height: 100%;
     font-weight: 300;
     font-size: 1.25rem;
     background: transparent;
