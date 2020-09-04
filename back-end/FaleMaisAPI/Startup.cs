@@ -47,6 +47,10 @@ namespace FaleMaisAPI {
       app.UseRouting();
       app.UseMiddleware<ExceptionHandler>();
 
+      app.UseCors(
+        opt => opt.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin()
+      );
+
       app.UseEndpoints(endpoints => {
         endpoints.MapControllers();
       });
