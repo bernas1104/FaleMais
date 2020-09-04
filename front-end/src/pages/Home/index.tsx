@@ -10,10 +10,12 @@ import {
   FormInput,
   InputRow,
   Results,
+  ResultContent,
 } from './styles';
 import Select from '../../components/Select';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
+import { useToast } from '../../hooks/ToastContext';
 import api from '../../services/api';
 
 interface AreaCodes {
@@ -47,30 +49,40 @@ const Home: React.FC = () => {
   const [plan, setPlan] = useState('');
   const [minutes, setMinutes] = useState('');
   const [callPrice, setCallPrice] = useState({} as CallPrice);
-  // const [inputError, setInputError] = useState(false); --> ToolTip!
+
+  const handleReset = useCallback(() => {
+    setCallPrice({} as CallPrice);
+  }, []);
 
   const handleSelectOrigin = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, value: string) => {
       e.preventDefault();
       setOriginAreaCode(value);
+      setDestinyAreaCode('');
+
+      if (callPrice.pricePerMinute) handleReset();
     },
-    [],
+    [callPrice, handleReset],
   );
 
   const handleSelectDestiny = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, value: string) => {
       e.preventDefault();
       setDestinyAreaCode(value);
+
+      if (callPrice.pricePerMinute) handleReset();
     },
-    [],
+    [callPrice, handleReset],
   );
 
   const handleSelectPlan = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, value: string) => {
       e.preventDefault();
       setPlan(value);
+
+      if (callPrice.pricePerMinute) handleReset();
     },
-    [],
+    [callPrice, handleReset],
   );
 
   const handleMinutesInput = useCallback(
@@ -88,7 +100,9 @@ const Home: React.FC = () => {
     [],
   );
 
-  const handlePricesCalculation = useCallback(async () => {
+  const { addToast } = useToast();
+
+  const handleFetchPrice = useCallback(async () => {
     try {
       const origin = Number(originAreaCode.split(' - ')[0]);
       const destiny = Number(destinyAreaCode.split(' - ')[0]);
@@ -102,12 +116,13 @@ const Home: React.FC = () => {
       };
 
       const schema = Yup.object().shape({
-        fromAreaCode: Yup.number().min(1).max(100).required(),
-        toAreaCode: Yup.number().min(1).max(100).required(),
-        minutes: Yup.number().min(1).required(),
-        plan: Yup.string()
-          .matches(/^FaleMais (30|60|120)$/gi)
-          .required(),
+        fromAreaCode: Yup.number().min(1, 'Escolha um DDD de origem'),
+        toAreaCode: Yup.number().min(1, 'Escolha um DDD de destino'),
+        minutes: Yup.number().min(1, 'Defina um total de minutos'),
+        plan: Yup.string().matches(
+          /^FaleMais (30|60|120)$/gi,
+          'Escolha um plano FaleMais',
+        ),
       });
 
       await schema.validate(data, { abortEarly: false });
@@ -122,10 +137,16 @@ const Home: React.FC = () => {
 
       setCallPrice({ fromAreaCode, toAreaCode, pricePerMinute });
     } catch (err) {
-      console.log(err);
-      // TODO TOASTS!
+      const { errors } = err as Yup.ValidationError;
+
+      errors.forEach(error => {
+        addToast({
+          title: 'Erro',
+          description: error,
+        });
+      });
     }
-  }, [originAreaCode, destinyAreaCode, plan, minutes]);
+  }, [originAreaCode, destinyAreaCode, plan, minutes, addToast]);
 
   useEffect(() => {
     async function getAreaCodes() {
@@ -159,64 +180,105 @@ const Home: React.FC = () => {
     [areaCodes, originAreaCode],
   );
 
+  const calculatePriceWithoutPlan = useMemo(
+    () => (Number(minutes) * callPrice.pricePerMinute).toFixed(2),
+    [minutes, callPrice],
+  );
+
+  const calculatePriceWithPlan = useMemo(() => {
+    const planMinutes = Number(plan.split(' ')[1]);
+
+    if (Number(minutes) > planMinutes)
+      return (
+        (Number(minutes) - planMinutes) *
+        (callPrice.pricePerMinute * 1.1)
+      ).toFixed(2);
+
+    return (callPrice.pricePerMinute * 0).toFixed(2);
+  }, [minutes, callPrice, plan]);
+
   return (
-    <Container>
-      <Calculator>
-        <Title>Calculadora FaleMais</Title>
+    <>
+      <Container>
+        <Calculator>
+          <Title>Calculadora FaleMais</Title>
 
-        <Form>
-          <FormInput>
-            <InputRow>
-              <Select
-                id="Origem"
-                icon={FiMapPin}
-                selectOptions={originAreaCodesOptions}
-                enabled
-                value={originAreaCode}
-                handleSelect={handleSelectOrigin}
-              />
-              <Select
-                id="Origem"
-                icon={FiMapPin}
-                selectOptions={destinyAreaCodeOptions}
-                enabled={!!originAreaCode}
-                value={destinyAreaCode}
-                handleSelect={handleSelectDestiny}
-              />
-            </InputRow>
+          <Form>
+            <FormInput>
+              <InputRow>
+                <Select
+                  id="Origem"
+                  icon={FiMapPin}
+                  selectOptions={originAreaCodesOptions}
+                  enabled
+                  value={originAreaCode}
+                  handleSelect={handleSelectOrigin}
+                />
+                <Select
+                  id="Origem"
+                  icon={FiMapPin}
+                  selectOptions={destinyAreaCodeOptions}
+                  enabled={!!originAreaCode}
+                  value={destinyAreaCode}
+                  handleSelect={handleSelectDestiny}
+                />
+              </InputRow>
 
-            <InputRow>
-              <Select
-                id="Planos"
-                icon={FiMapPin}
-                selectOptions={plans}
-                enabled
-                value={plan}
-                handleSelect={handleSelectPlan}
-              />
-              <Input
-                icon={FiClock}
-                fieldName="Minutos"
-                value={minutes}
-                onChange={e => handleMinutesInput(e)}
-              />
-            </InputRow>
+              <InputRow>
+                <Select
+                  id="Planos"
+                  icon={FiMapPin}
+                  selectOptions={plans}
+                  enabled
+                  value={plan}
+                  handleSelect={handleSelectPlan}
+                />
+                <Input
+                  icon={FiClock}
+                  fieldName="Minutos"
+                  value={minutes}
+                  onChange={e => handleMinutesInput(e)}
+                />
+              </InputRow>
 
-            <Button icon={FiPhone} onClick={handlePricesCalculation}>
-              {'Calcular'.toUpperCase()}
-            </Button>
-          </FormInput>
+              <Button icon={FiPhone} onClick={handleFetchPrice}>
+                {'Calcular'.toUpperCase()}
+              </Button>
+            </FormInput>
 
-          <Results>
-            <h1>Hello, Results!</h1>
-            {callPrice.fromAreaCode}
-            {callPrice.toAreaCode}
-            {callPrice.pricePerMinute &&
-              callPrice.pricePerMinute.toPrecision(2)}
-          </Results>
-        </Form>
-      </Calculator>
-    </Container>
+            <Results>
+              {callPrice && (
+                <ResultContent>
+                  <h2>Sem Plano</h2>
+                  <hr />
+                  <span>
+                    <strong>Total</strong>
+                    {` - R$ `}
+                    {callPrice.pricePerMinute
+                      ? calculatePriceWithoutPlan
+                      : (0).toFixed(2)}
+                  </span>
+                </ResultContent>
+              )}
+
+              {callPrice && (
+                <ResultContent>
+                  <h2>{plan || 'FaleMais'}</h2>
+                  <hr />
+                  <span>
+                    <strong>Total</strong>
+                    {` - R$ `}
+                    {callPrice.pricePerMinute
+                      ? calculatePriceWithPlan
+                      : (0).toFixed(2)}
+                  </span>
+                </ResultContent>
+              )}
+            </Results>
+          </Form>
+        </Calculator>
+      </Container>
+    </>
   );
 };
 
