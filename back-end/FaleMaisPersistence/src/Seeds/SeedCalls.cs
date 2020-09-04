@@ -9,32 +9,32 @@ namespace FaleMaisPersistence.Seeds {
         new Call {
           FromAreaCode = 68,
           ToAreaCode = 82,
-          PricePerMinute = 1.90D,
+          PricePerMinute = 1.90m,
         },
         new Call {
           FromAreaCode = 82,
           ToAreaCode = 68,
-          PricePerMinute = 2.90D,
+          PricePerMinute = 2.90m,
         },
         new Call {
           FromAreaCode = 68,
           ToAreaCode = 96,
-          PricePerMinute = 1.70D,
+          PricePerMinute = 1.70m,
         },
         new Call {
           FromAreaCode = 96,
           ToAreaCode = 68,
-          PricePerMinute = 2.70D,
+          PricePerMinute = 2.70m,
         },
         new Call {
           FromAreaCode = 82,
           ToAreaCode = 96,
-          PricePerMinute = 0.90D,
+          PricePerMinute = 0.90m,
         },
         new Call {
           FromAreaCode = 96,
           ToAreaCode = 82,
-          PricePerMinute = 1.90D,
+          PricePerMinute = 1.90m,
         }
       );
     }

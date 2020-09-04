@@ -17,7 +17,7 @@ namespace FaleMaisTests.Bogus.Entities {
 
           return value;
         })
-        .RuleFor(x => x.PricePerMinute, (f) => f.Random.Double() * 10)
+        .RuleFor(x => x.PricePerMinute, (f) => f.Random.Decimal() * 10)
         .RuleFor(x => x.CreatedAt, () => DateTime.Now)
         .RuleFor(x => x.UpdatedAt, () => DateTime.Now)
         .RuleFor(x => x.DeletedAt, () => null);
@@ -48,7 +48,7 @@ namespace FaleMaisTests.Bogus.Entities {
 
           return value;
         })
-        .RuleFor(x => x.PricePerMinute, (f) => f.Random.Double() * 10)
+        .RuleFor(x => x.PricePerMinute, (f) => f.Random.Decimal() * 10)
         .RuleFor(x => x.CreatedAt, () => DateTime.Now)
         .RuleFor(x => x.UpdatedAt, () => DateTime.Now)
         .RuleFor(x => x.DeletedAt, () => null);

@@ -5,7 +5,7 @@ namespace FaleMaisServices.ViewModels {
   public class CallViewModel : Notifiable, IValidatable {
     public byte FromAreaCode { get; set; }
     public byte ToAreaCode { get; set; }
-    public double PricePerMinute { get; set; }
+    public decimal PricePerMinute { get; set; }
 
     public void Validate() {
       AddNotifications(
@@ -29,7 +29,7 @@ namespace FaleMaisServices.ViewModels {
           .IfNotNull(PricePerMinute, contract => (
             contract.IsBetween(
               PricePerMinute,
-              0.01D, 10.00D,
+              0.01m, 10.00m,
               "Price Per Minute",
               "Must be a number between 0.01 and 10.00"
             )

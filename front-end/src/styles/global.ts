@@ -13,7 +13,8 @@ export default createGlobalStyle`
     color: #333;
     font-size: 16px;
     font-weight: 300;
-    background: #f5f5f5;
+    background: #be0021;
+;
     -webkit-font-smoothing: antialiased;
   }
 

@@ -15,7 +15,7 @@ export const Container = styled.div<ContainerProps>`
     padding: 0 12px;
     min-width: 64px;
     border-radius: 4px;
-    background: #6200cc;
+    background: #be0021;
 
     ${props =>
       props.background &&

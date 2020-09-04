@@ -17,7 +17,7 @@ namespace FaleMaisTests.Bogus.ViewModels {
 
           return value;
         })
-        .RuleFor(x => x.PricePerMinute, (f) => f.Random.Double() * 9);
+        .RuleFor(x => x.PricePerMinute, (f) => f.Random.Decimal() * 9);
 
       return priceViewModel.Generate();
     }
@@ -39,7 +39,7 @@ namespace FaleMaisTests.Bogus.ViewModels {
 
       var priceViewModels = new Faker<CallViewModel>()
         .RuleFor(x => x.FromAreaCode, () => fromAreaCode)
-        .RuleFor(x => x.PricePerMinute, (f) => f.Random.Double() * 10);
+        .RuleFor(x => x.PricePerMinute, (f) => f.Random.Decimal() * 10);
 
       foreach(var price in prices) {
         priceViewModels.RuleFor(x => x.ToAreaCode, () => price.ToAreaCode);

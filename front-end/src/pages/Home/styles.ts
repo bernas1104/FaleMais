@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: #ff8e4c;
 
   padding: 100px 15%;
   min-height: 100vh;
@@ -19,15 +20,40 @@ export const Calculator = styled.div`
   border-radius: 10px;
   flex-direction: column;
   justify-content: center;
+  background: #f5f5f5;
 
   padding: 30px 0 50px;
 
   box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
 `;
 
-export const Title = styled.h1`
+export const Title = styled.div`
   margin: 20px 0;
-  text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+  }
+
+  h1 {
+    margin: 0 0 13px 0;
+  }
+
+  @media screen and (max-width: 660px) {
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      margin: 0;
+      flex: 1 !important;
+    }
+  }
 `;
 
 export const Form = styled.div`
@@ -98,4 +124,14 @@ export const ResultContent = styled.div`
   @media screen and (max-width: 900px) {
     margin-bottom: 50px;
   }
+`;
+
+export const HighlightNoPlan = styled.span`
+  color: #e8143a;
+  font-weight: 400;
+`;
+
+export const HighlightPlan = styled.span`
+  color: #779e00;
+  font-weight: 400;
 `;

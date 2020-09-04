@@ -8,7 +8,7 @@ namespace FaleMaisTests.Bogus.Entities {
   public static class AreaCodeFaker {
     public static AreaCode GenerateAreaCode(AreaCodeViewModel info) {
       var city = new Faker<AreaCode>()
-        .RuleFor(x => x.Id, () => info.AreaCode)
+        .RuleFor(x => x.Id, () => info.Id)
         .RuleFor(x => x.Name, () => info.Name)
         .RuleFor(x => x.CreatedAt, () => DateTime.Now)
         .RuleFor(x => x.UpdatedAt, () => DateTime.Now)

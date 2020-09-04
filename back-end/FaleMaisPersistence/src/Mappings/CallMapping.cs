@@ -16,7 +16,7 @@ namespace FaleMaisPersistence.Mappings {
         .IsRequired();
       builder.Property(x => x.PricePerMinute)
         .HasColumnName("price_per_minute")
-        .HasColumnType("real")
+        .HasColumnType("decimal")
         .IsRequired();
       builder.Property(x => x.CreatedAt)
         .HasDefaultValue(DateTime.Now)

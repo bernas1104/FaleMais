@@ -11,12 +11,16 @@ import {
   InputRow,
   Results,
   ResultContent,
+  HighlightNoPlan,
+  HighlightPlan,
 } from './styles';
 import Select from '../../components/Select';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import { useToast } from '../../hooks/ToastContext';
 import api from '../../services/api';
+
+import FaleMaisLogo from '../../assets/images/FaleMais.png';
 
 interface AreaCodes {
   id: number;
@@ -201,7 +205,10 @@ const Home: React.FC = () => {
     <>
       <Container>
         <Calculator>
-          <Title>Calculadora FaleMais</Title>
+          <Title>
+            <img src={FaleMaisLogo} alt="FaleMais logo" />
+            <h1>Calculadora</h1>
+          </Title>
 
           <Form>
             <FormInput>
@@ -253,10 +260,13 @@ const Home: React.FC = () => {
                   <hr />
                   <span>
                     <strong>Total</strong>
-                    {` - R$ `}
-                    {callPrice.pricePerMinute
-                      ? calculatePriceWithoutPlan
-                      : (0).toFixed(2)}
+                    {` - `}
+                    <HighlightNoPlan>
+                      {`R$ `}
+                      {callPrice.pricePerMinute
+                        ? calculatePriceWithoutPlan
+                        : (0).toFixed(2)}
+                    </HighlightNoPlan>
                   </span>
                 </ResultContent>
               )}
@@ -267,10 +277,13 @@ const Home: React.FC = () => {
                   <hr />
                   <span>
                     <strong>Total</strong>
-                    {` - R$ `}
-                    {callPrice.pricePerMinute
-                      ? calculatePriceWithPlan
-                      : (0).toFixed(2)}
+                    {` - `}
+                    <HighlightPlan>
+                      {`R$ `}
+                      {callPrice.pricePerMinute
+                        ? calculatePriceWithPlan
+                        : (0).toFixed(2)}
+                    </HighlightPlan>
                   </span>
                 </ResultContent>
               )}

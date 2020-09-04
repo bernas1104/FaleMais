@@ -28,7 +28,7 @@ namespace FaleMaisTests.UnitTests.Services {
       var data = CallViewModelFaker.GenerateCallViewModel();
 
       var call = CallFaker.GenerateCall(data);
-      call.PricePerMinute = 4.30D;
+      call.PricePerMinute = 4.30m;
 
       var updatedCall = call;
       updatedCall.PricePerMinute = data.PricePerMinute;
