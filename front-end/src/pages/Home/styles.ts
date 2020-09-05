@@ -7,7 +7,7 @@ export const Container = styled.div`
   justify-content: center;
   background: #ff8e4c;
 
-  padding: 100px 15%;
+  padding: 100px 10%;
   min-height: 100vh;
 
   @media screen and (max-width: 900px) {
@@ -63,7 +63,7 @@ export const Form = styled.div`
   flex-direction: row;
   justify-content: center;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 460px) {
     flex-direction: column !important;
   }
 `;
@@ -72,6 +72,7 @@ export const FormInput = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding-right: 10px;
 `;
 
 export const InputRow = styled.div`
@@ -96,7 +97,7 @@ export const InputRow = styled.div`
 `;
 
 export const Results = styled.div`
-  padding: 0 20px;
+  padding-left: 10px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -106,7 +107,7 @@ export const Results = styled.div`
     justify-content: center;
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 460px) {
     margin-top: 50px;
 
     div + div {
