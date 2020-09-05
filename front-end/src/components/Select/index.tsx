@@ -38,19 +38,14 @@ const Select: React.FC<SelectProps> = ({
 
   const handleContainerClick = useCallback(() => {
     if (enabled) {
-      if (selectRef.current) {
-        selectRef.current.focus();
-        setIsFocused(!isFocused);
-      }
+      selectRef.current!.focus();
+      setIsFocused(!isFocused);
     }
   }, [isFocused, enabled]);
 
   const handleOverlayClick = useCallback(() => {
-    if (selectRef.current) {
-      selectRef.current.blur();
-
-      setIsFocused(!isFocused);
-    }
+    selectRef.current!.blur();
+    setIsFocused(!isFocused);
   }, [isFocused]);
 
   return (
@@ -60,13 +55,19 @@ const Select: React.FC<SelectProps> = ({
         selectActive={isFocused}
         isSelected={!!value}
         enabled={enabled}
+        data-testid={`${String(id).toLowerCase()}-select`}
       >
         {Icon && <Icon size={20} />}
         <span>{value}</span>
         <FiChevronDown size={20} />
 
-        <label htmlFor={id}>{id}</label>
-        <select name={id} id={id} ref={selectRef}>
+        <label htmlFor={id} data-testid="select-label">
+          {id}
+        </label>
+        <select data-testid={id} name={id} id={id} ref={selectRef}>
+          <option key={0} value={0}>
+            {id}
+          </option>
           {selectOptions.map(option => (
             <option key={option.id} value={option.id}>
               {option.value}
@@ -74,12 +75,19 @@ const Select: React.FC<SelectProps> = ({
           ))}
         </select>
 
-        <OptionsContainer selectActive={isFocused}>
+        <OptionsContainer
+          selectActive={isFocused}
+          data-testid="options-container"
+        >
           {selectOptions.map(option => (
             <a
               href={`#${option.value}`}
               key={option.id}
-              onClick={e => handleSelect(e, String(option.value))}
+              onClick={e => {
+                handleSelect(e, String(option.value));
+                selectRef.current!.value = String(option.id);
+              }}
+              data-testid={`${String(id).toLowerCase()}-option-${option.id}`}
             >
               {option.value}
             </a>
@@ -87,7 +95,11 @@ const Select: React.FC<SelectProps> = ({
         </OptionsContainer>
       </Container>
 
-      <Overlay selectActive={isFocused} onClick={handleOverlayClick} />
+      <Overlay
+        selectActive={isFocused}
+        onClick={handleOverlayClick}
+        data-testid="overlay"
+      />
     </>
   );
 };

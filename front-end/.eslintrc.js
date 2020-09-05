@@ -1,7 +1,8 @@
 module.exports = {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true,
   },
   "extends": [
     "plugin:react/recommended",
@@ -26,7 +27,7 @@ module.exports = {
     "react",
     "prettier",
     "react-hooks",
-    "@typescript-eslint"
+    "@typescript-eslint",
   ],
   "rules": {
     "react/prop-types": "off",

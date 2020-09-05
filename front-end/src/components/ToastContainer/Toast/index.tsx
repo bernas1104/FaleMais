@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { FiAlertTriangle, FiX } from 'react-icons/fi';
 
 import { Container, Content } from './styles';
-import { ToastMessage, useToast } from '../../../hooks/ToastContext';
+import { ToastMessage, useToast } from '../../../hooks/toast';
 
 interface ToastProps {
   message: ToastMessage;
@@ -23,14 +23,18 @@ const Toast: React.FC<ToastProps> = ({ message, style }) => {
   }, [removeToast, message.id]);
 
   return (
-    <Container style={style}>
+    <Container style={style} data-testid={`toast-${message.id}`}>
       <FiAlertTriangle size={20} color="#f5f5f5" />
       <Content>
         <strong>{message.title}</strong>
         {message.description && <p>{message.description}</p>}
       </Content>
 
-      <button type="button" onClick={() => removeToast(message.id)}>
+      <button
+        data-testid="toast-close-btn"
+        type="button"
+        onClick={() => removeToast(message.id)}
+      >
         <FiX size={20} color="#f5f5f5" />
       </button>
     </Container>

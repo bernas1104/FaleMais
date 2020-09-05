@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ToastProvider } from './ToastContext';
+import { ToastProvider } from './toast';
 
 const AppProvider: React.FC = ({ children }) => {
   return <ToastProvider>{children}</ToastProvider>;

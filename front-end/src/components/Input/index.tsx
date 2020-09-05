@@ -29,10 +29,17 @@ const Input: React.FC<InputProps> = ({ icon: Icon, fieldName, ...rest }) => {
   }, []);
 
   return (
-    <Container isFocused={isFocused} isFilled={isFilled}>
+    <Container
+      isFocused={isFocused}
+      isFilled={isFilled}
+      data-testid="input-component"
+    >
       {Icon && <Icon size={20} />}
-      <label htmlFor={fieldName}>{fieldName}</label>
+      <label htmlFor={fieldName} data-testid={fieldName}>
+        {fieldName}
+      </label>
       <input
+        data-testid="input-field"
         id={fieldName}
         type="text"
         ref={inputRef}

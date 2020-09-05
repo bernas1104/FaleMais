@@ -10,6 +10,7 @@ export const Container = styled.div<ContainerProps>`
   display: flex;
 
   button {
+    cursor: pointer;
     border: 0;
     height: 36px;
     padding: 0 12px;
