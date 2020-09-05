@@ -38,19 +38,14 @@ const Select: React.FC<SelectProps> = ({
 
   const handleContainerClick = useCallback(() => {
     if (enabled) {
-      if (selectRef.current) {
-        selectRef.current.focus();
-        setIsFocused(!isFocused);
-      }
+      selectRef.current!.focus();
+      setIsFocused(!isFocused);
     }
   }, [isFocused, enabled]);
 
   const handleOverlayClick = useCallback(() => {
-    if (selectRef.current) {
-      selectRef.current.blur();
-
-      setIsFocused(!isFocused);
-    }
+    selectRef.current!.blur();
+    setIsFocused(!isFocused);
   }, [isFocused]);
 
   return (
@@ -66,7 +61,9 @@ const Select: React.FC<SelectProps> = ({
         <span>{value}</span>
         <FiChevronDown size={20} />
 
-        <label htmlFor={id}>{id}</label>
+        <label htmlFor={id} data-testid="select-label">
+          {id}
+        </label>
         <select data-testid={id} name={id} id={id} ref={selectRef}>
           <option key={0} value={0}>
             {id}
@@ -78,15 +75,17 @@ const Select: React.FC<SelectProps> = ({
           ))}
         </select>
 
-        <OptionsContainer selectActive={isFocused}>
+        <OptionsContainer
+          selectActive={isFocused}
+          data-testid="options-container"
+        >
           {selectOptions.map(option => (
             <a
               href={`#${option.value}`}
               key={option.id}
               onClick={e => {
                 handleSelect(e, String(option.value));
-                if (selectRef.current)
-                  selectRef.current.value = String(option.id);
+                selectRef.current!.value = String(option.id);
               }}
               data-testid={`${String(id).toLowerCase()}-option-${option.id}`}
             >
@@ -96,7 +95,11 @@ const Select: React.FC<SelectProps> = ({
         </OptionsContainer>
       </Container>
 
-      <Overlay selectActive={isFocused} onClick={handleOverlayClick} />
+      <Overlay
+        selectActive={isFocused}
+        onClick={handleOverlayClick}
+        data-testid="overlay"
+      />
     </>
   );
 };
