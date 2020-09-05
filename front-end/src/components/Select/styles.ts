@@ -43,6 +43,12 @@ export const Container = styled.div<ContainerProps>`
     position: absolute;
 
     transition: all 0.28s;
+
+    ${props =>
+      props.enabled &&
+      css`
+        cursor: pointer;
+      `}
   }
 
   select {

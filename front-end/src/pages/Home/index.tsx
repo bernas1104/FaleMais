@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
-import { FiPhone, FiClock, FiMapPin } from 'react-icons/fi';
+import { FiPhone, FiClock, FiMapPin, FiDollarSign } from 'react-icons/fi';
 import * as Yup from 'yup';
 
 import {
@@ -17,10 +17,11 @@ import {
 import Select from '../../components/Select';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
-import { useToast } from '../../hooks/ToastContext';
 import api from '../../services/api';
 
 import FaleMaisLogo from '../../assets/images/FaleMais.png';
+
+import { useToast } from '../../hooks/toast';
 
 interface AreaCodes {
   id: number;
@@ -54,6 +55,8 @@ const Home: React.FC = () => {
   const [minutes, setMinutes] = useState('');
   const [callPrice, setCallPrice] = useState({} as CallPrice);
 
+  const { addToast } = useToast();
+
   const handleReset = useCallback(() => {
     setCallPrice({} as CallPrice);
   }, []);
@@ -83,10 +86,8 @@ const Home: React.FC = () => {
     (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, value: string) => {
       e.preventDefault();
       setPlan(value);
-
-      if (callPrice.pricePerMinute) handleReset();
     },
-    [callPrice, handleReset],
+    [],
   );
 
   const handleMinutesInput = useCallback(
@@ -103,8 +104,6 @@ const Home: React.FC = () => {
     },
     [],
   );
-
-  const { addToast } = useToast();
 
   const handleFetchPrice = useCallback(async () => {
     try {
@@ -217,12 +216,12 @@ const Home: React.FC = () => {
                   id="Origem"
                   icon={FiMapPin}
                   selectOptions={originAreaCodesOptions}
-                  enabled
+                  enabled={!!areaCodes.length}
                   value={originAreaCode}
                   handleSelect={handleSelectOrigin}
                 />
                 <Select
-                  id="Origem"
+                  id="Destino"
                   icon={FiMapPin}
                   selectOptions={destinyAreaCodeOptions}
                   enabled={!!originAreaCode}
@@ -234,7 +233,7 @@ const Home: React.FC = () => {
               <InputRow>
                 <Select
                   id="Planos"
-                  icon={FiMapPin}
+                  icon={FiPhone}
                   selectOptions={plans}
                   enabled
                   value={plan}
@@ -245,10 +244,11 @@ const Home: React.FC = () => {
                   fieldName="Minutos"
                   value={minutes}
                   onChange={e => handleMinutesInput(e)}
+                  data-testid="minutes-input"
                 />
               </InputRow>
 
-              <Button icon={FiPhone} onClick={handleFetchPrice}>
+              <Button icon={FiDollarSign} onClick={handleFetchPrice}>
                 {'Calcular'.toUpperCase()}
               </Button>
             </FormInput>
@@ -261,7 +261,7 @@ const Home: React.FC = () => {
                   <span>
                     <strong>Total</strong>
                     {` - `}
-                    <HighlightNoPlan>
+                    <HighlightNoPlan data-testid="results-without-plan">
                       {`R$ `}
                       {callPrice.pricePerMinute
                         ? calculatePriceWithoutPlan
@@ -278,7 +278,7 @@ const Home: React.FC = () => {
                   <span>
                     <strong>Total</strong>
                     {` - `}
-                    <HighlightPlan>
+                    <HighlightPlan data-testid="results-with-plan">
                       {`R$ `}
                       {callPrice.pricePerMinute
                         ? calculatePriceWithPlan

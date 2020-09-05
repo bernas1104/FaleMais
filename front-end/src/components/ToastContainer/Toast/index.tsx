@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { FiAlertTriangle, FiX } from 'react-icons/fi';
 
 import { Container, Content } from './styles';
-import { ToastMessage, useToast } from '../../../hooks/ToastContext';
+import { ToastMessage, useToast } from '../../../hooks/toast';
 
 interface ToastProps {
   message: ToastMessage;

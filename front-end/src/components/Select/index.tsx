@@ -60,13 +60,17 @@ const Select: React.FC<SelectProps> = ({
         selectActive={isFocused}
         isSelected={!!value}
         enabled={enabled}
+        data-testid={`${String(id).toLowerCase()}-select`}
       >
         {Icon && <Icon size={20} />}
         <span>{value}</span>
         <FiChevronDown size={20} />
 
         <label htmlFor={id}>{id}</label>
-        <select name={id} id={id} ref={selectRef}>
+        <select data-testid={id} name={id} id={id} ref={selectRef}>
+          <option key={0} value={0}>
+            {id}
+          </option>
           {selectOptions.map(option => (
             <option key={option.id} value={option.id}>
               {option.value}
@@ -79,7 +83,12 @@ const Select: React.FC<SelectProps> = ({
             <a
               href={`#${option.value}`}
               key={option.id}
-              onClick={e => handleSelect(e, String(option.value))}
+              onClick={e => {
+                handleSelect(e, String(option.value));
+                if (selectRef.current)
+                  selectRef.current.value = String(option.id);
+              }}
+              data-testid={`${String(id).toLowerCase()}-option-${option.id}`}
             >
               {option.value}
             </a>
