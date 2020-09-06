@@ -80,7 +80,24 @@ Certifique-se de que as portas 5000 e 5001 estão livres para execução do back
 
 O front-end da aplicação foi desenvolvido utilizando o React.js e TypeScript. Para
 execução do servidor de desenvolvimento e dos testes, é necessário instalar todas as
-dependências do projeto. Para realizar a instalação, vá para raíz do projeto front-end e execute:
+dependências do projeto. 
+
+### NPM
+
+Para executar o projeto React, deve-se instalar o Node.js e NPM. A instalação
+pode ser feita seguindo as instruções encontradas [aqui](https://nodejs.org/en/).
+
+Após a instalação, utilize os comandos:
+
+> node -v  
+> npm -v
+
+Para verificar se a instalação foi bem sucedida.
+
+### Dependências React.js
+
+Para realizar a instalação das dependências do projeto, vá para raíz do projeto 
+front-end e execute:
 
 > npm i
 
