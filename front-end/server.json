@@ -1,0 +1,54 @@
+{
+  "areacodes": [
+    {
+      "id": 1,
+      "name": "#1 Area Code"
+    },
+    {
+      "id": 2,
+      "name": "#2 Area Code"
+    },
+    {
+      "id": 3,
+      "name": "#3 Area Code"
+    }
+  ],
+  "calls": [
+    {
+      "id": 1,
+      "fromAreaCode": 1,
+      "toAreaCode": 2,
+      "pricePerMinute": 1.9
+    },
+    {
+      "id": 2,
+      "fromAreaCode": 2,
+      "toAreaCode": 1,
+      "pricePerMinute": 2.9
+    },
+    {
+      "id": 3,
+      "fromAreaCode": 1,
+      "toAreaCode": 3,
+      "pricePerMinute": 1.7
+    },
+    {
+      "id": 4,
+      "fromAreaCode": 3,
+      "toAreaCode": 1,
+      "pricePerMinute": 2.7
+    },
+    {
+      "id": 5,
+      "fromAreaCode": 2,
+      "toAreaCode": 3,
+      "pricePerMinute": 0.9
+    },
+    {
+      "id": 6,
+      "fromAreaCode": 3,
+      "toAreaCode": 2,
+      "pricePerMinute": 1.9
+    }
+  ]
+}

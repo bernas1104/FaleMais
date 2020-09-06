@@ -1,0 +1,9 @@
+{
+  "/v1/areacodes": "/areacodes",
+  "/v1/calls?from-area-code=1&to-area-code=2": "/calls/1",
+  "/v1/calls?from-area-code=2&to-area-code=1": "/calls/2",
+  "/v1/calls?from-area-code=1&to-area-code=3": "/calls/3",
+  "/v1/calls?from-area-code=3&to-area-code=1": "/calls/4",
+  "/v1/calls?from-area-code=2&to-area-code=3": "/calls/5",
+  "/v1/calls?from-area-code=3&to-area-code=2": "/calls/6"
+}

@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FaleMaisPersistence.Migrations
 {
+    [ExcludeFromCodeCoverage]
     public partial class AlterTablesRelations2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
